@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://example.org/</loc>
+    <lastmod>2020-12-30T16:08:56+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/webapps/</loc>
+    <lastmod>2020-12-30T16:08:56+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/</loc>
+    <lastmod>2020-12-30T16:08:56+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/categories/</loc>
+    <lastmod>2020-12-30T02:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/gin/</loc>
+    <lastmod>2020-12-30T02:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/golang/</loc>
+    <lastmod>2020-12-30T02:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/categories/golang/</loc>
+    <lastmod>2020-12-30T02:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/todo-app-using-gin/</loc>
+    <lastmod>2020-12-30T02:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/rest/</loc>
+    <lastmod>2020-12-30T02:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/</loc>
+    <lastmod>2020-12-30T02:01:58+05:30</lastmod>
+  </url>
+  
+</urlset>

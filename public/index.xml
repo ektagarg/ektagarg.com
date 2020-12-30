@@ -1,0 +1,296 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog by Ekta</title>
+    <link>http://example.org/</link>
+    <description>Recent content on Blog by Ekta</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 30 Dec 2020 16:08:56 +0530</lastBuildDate>
+    
+        <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>How web applications work?</title>
+        <link>http://example.org/posts/webapps/</link>
+        <pubDate>Wed, 30 Dec 2020 16:08:56 +0530</pubDate>
+        
+        <guid>http://example.org/posts/webapps/</guid>
+        <description>Blog by Ekta http://example.org/posts/webapps/ -&lt;p&gt;You must be thinking that such a basic question doesn&amp;rsquo;t need an entire article. But as you will read, you&amp;rsquo;ll understand why this basic question do deserve an article.&lt;/p&gt;
+&lt;p&gt;Well, I asked this same question written above to a room full of programmers/developers. I could see the look of total contempt and amazement for asking such a basic question. But as I started getting answers from assembled technologies, I realised that the core understanding of how web apps work isn&amp;rsquo;t that simple.&lt;/p&gt;
+&lt;p&gt;In a basic sense, a web application is a computer program where a client sends an HTTP request and a server sends an HTML page in the form of an HTTP response. You must be thinking &amp;ldquo;Isn&amp;rsquo;t it exactly like a web server?&amp;quot;. No, it&amp;rsquo;s not! A web server looks for the file in a directory and return those files, but a web application doesn&amp;rsquo;t simply return files; it first processes and request and performs programmed operations and then return the files.&lt;/p&gt;
+&lt;p&gt;A web application is a program which needs to fulfill this criteria:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The program must return HTML to a client that renders HTML and then displays it to a user.
+The data must be transported to the client through a protocol i.e. HTTP.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If a program doesn&amp;rsquo;t render HTML, instead it provides data in some other form then it&amp;rsquo;s a web service, not a web application.
+A little digging into the history of web applications
+HTTP&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Earlier in this article, I used term HTTP.&lt;/p&gt;
+&lt;h3 id=&#34;what-is-http&#34;&gt;What is HTTP?&lt;/h3&gt;
+&lt;p&gt;HTTP is the application-level communications, a stateless, text-based, request-response protocol that uses the client-server computing model. 
+A client-server computing model is one where a client (a requester) always initiates the conversation with a server (the responder). Here, a browser works as a client and web server works as a server. Everything in HTTP request starts with a request.&lt;/p&gt;
+&lt;h5 id=&#34;the-http-request-like-any-message-consists-of-a-few-lines-of-text-in-the-following-order&#34;&gt;The HTTP request, like any message, consists of a few lines of text in the following order:&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;Request-line
+Zero or more request headers
+An empty line
+The message body (optional)
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;this-is-how-an-http-request-looks&#34;&gt;This is how an HTTP request looks:&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;GET /Protocols/rfc2616/rfc2616.html HTTP/1.1
+Host: www.w3.org
+User-Agent: Mozilla/5.0
+(empty line)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In this request, the first line is the request-line. The first word in the request-line is the request method, followed by the URI(Uniform Resource Identifier) and HTTP version. The next two lines are the request headers. Notice the last line is empty, which must exist even though there&amp;rsquo;s no message body. Whether the message body exists depends on the request method.
+Let&amp;rsquo;s have a look at all the request methods:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;GET&lt;/code&gt; - Tells the server to return the specified resource.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;HEAD&lt;/code&gt; - The same as GET except that the server must not return a message body. This method is often used to get the response headers without carrying the weight of the rest of the message body over the network.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;POST&lt;/code&gt; - Tells the server that the data in the message body should be passed to the resource identified by the URI. What the server does with the message body is up to the server.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;PUT&lt;/code&gt; - Tells the server that the data in the message body should be the resource at the given URI. If data already exists at the resource identified by the URI, that data is replaced. Otherwise, a new resource is created at the place where the URI is.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;DELETE&lt;/code&gt; - Tells the server to remove the resource identified by the URI.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;TRACE&lt;/code&gt; - Tells the server to return the request. This way, the client can see what the intermediate servers did to the request.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;OPTIONS&lt;/code&gt; - Tells the server to return a list of HTTP methods that the server supports.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;CONNECT&lt;/code&gt; - Tells the server to set up a network connection with the client. This method is used mostly for setting up SSL tunneling (to enable HTTPS).&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;PATCH&lt;/code&gt; - Tells the server that the data in the message body modifies the resource identified by the URI.&lt;/p&gt;
+- http://example.org/posts/webapps/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Golang: A Todo App using GIN</title>
+        <link>http://example.org/posts/todo-app-using-gin/</link>
+        <pubDate>Wed, 30 Dec 2020 02:01:58 +0530</pubDate>
+        
+        <guid>http://example.org/posts/todo-app-using-gin/</guid>
+        <description>Blog by Ekta http://example.org/posts/todo-app-using-gin/ -&lt;p&gt;Gin is a high-performance micro-framework that can be used to build web applications. It allows you to write middleware that can be plugged into one or more request handlers or groups of request handlers.&lt;/p&gt;
+&lt;p&gt;It is the most popular framework in Golang. Look at the picture above, this framework has the highest no. of stars on Github.com&lt;/p&gt;
+&lt;h2 id=&#34;goals&#34;&gt;Goals&lt;/h2&gt;
+&lt;p&gt;By the end of this tutorial, you will:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Learn how to use Gin to create RESTful APIs (we will be creating a TODO application), and&lt;/li&gt;
+&lt;li&gt;Understand the parts of a web application written in Go.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;p&gt;For this tutorial, you will need Go and postman installed on your machine.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; If you don’t have postman, you can use any other tool that you would use to test API endpoints.&lt;/p&gt;
+&lt;h3 id=&#34;list-of-packages-we-are-going-to-use&#34;&gt;List of Packages we are going to use:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;go get github.com/go-sql-driver/mysql
+go get github.com/gin-gonic/gin
+go get github.com/jinzhu/gorm
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;project-structure&#34;&gt;Project Structure:&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;http://example.org/images/project-structure.png&#34; alt=&#34;Project structure for GIN-TODO-APP&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;list-of-apis&#34;&gt;List of APIs:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;GET: /v1/todo 
+POST: /v1/todo
+GET: /v1/todo/:id
+PUT: /v1/todo/:id
+DELETE: /v1/todo/:id
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Let’s start working, I would suggest you write each n every line of code by yourself, this way you’ll understand things better. So we’ll start by creating a project called GIN-TODO-APP.&lt;/p&gt;
+&lt;h2 id=&#34;setup-database&#34;&gt;Setup Database&lt;/h2&gt;
+&lt;p&gt;GORM is an ORM library written in Golang which we are using in our project. In this config file, we will be creating a function called &lt;strong&gt;BuildDBConfig()&lt;/strong&gt; where you can set up your DB host, port, username, password, and dbname and pass it to &lt;strong&gt;DbURL()&lt;/strong&gt; to create your database URL.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;package Config
+import (
+	&amp;quot;fmt&amp;quot;
+	&amp;quot;github.com/jinzhu/gorm&amp;quot;
+)
+
+var DB *gorm.DB
+
+// DBConfig represents db configuration
+type DBConfig struct {
+	Host     string
+	Port     int
+	User     string
+	DBName   string
+	Password string
+}
+
+func BuildDBConfig() *DBConfig {
+	dbConfig := DBConfig{
+		Host:     &amp;quot;0.0.0.0&amp;quot;,
+		Port:     3306,
+		User:     &amp;quot;root&amp;quot;,
+		DBName:   &amp;quot;todos&amp;quot;,
+		Password: &amp;quot;mypassword&amp;quot;,
+	}
+	return &amp;amp;dbConfig
+}
+
+func DbURL(dbConfig *DBConfig) string {
+	return fmt.Sprintf(
+		&amp;quot;%s:%s@tcp(%s:%d)/%s?charset=utf8&amp;amp;parseTime=True&amp;amp;loc=Local&amp;quot;,
+		dbConfig.User,
+		dbConfig.Password,
+		dbConfig.Host,
+		dbConfig.Port,
+		dbConfig.DBName,
+	)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;table-and-schema&#34;&gt;Table and Schema&lt;/h2&gt;
+&lt;p&gt;Let’s talk about DB Structure and schema. For this project, we’ll be having just one table ‘todo’. This table will have id, title, description as its attributes.&lt;/p&gt;
+&lt;p&gt;TableName() function will be used wherever we need to access the table name.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;package Models
+
+type Todo struct {
+	ID uint            `json:&amp;quot;id&amp;quot;`
+	Title string       `json:&amp;quot;title&amp;quot;`
+	Description string `json:&amp;quot;description&amp;quot;`
+}
+
+func (b *Todo) TableName() string {
+	return &amp;quot;todo&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;setup-routes-and-list-of-apis&#34;&gt;Setup routes and list of APIs&lt;/h2&gt;
+&lt;p&gt;Here, we are going to set up a router using&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;r := gin.Default()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Default returns a gin Engine instance with the Logger(write the logs to gin.DefaultWriter) and Recovery middleware already attached but if you need to start a blank gin instance with middleware attached, you should use gin.New()&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;v1 := r.Group(&amp;quot;/v1&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You can group multiple routes using Group() function, these APIs will be accessible on /v1&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;package Routes
+
+import (
+	&amp;quot;../Controllers&amp;quot;
+	&amp;quot;github.com/gin-gonic/gin&amp;quot;
+)
+
+func SetupRouter() *gin.Engine {
+	r := gin.Default()
+	v1 := r.Group(&amp;quot;/v1&amp;quot;)
+	{
+		v1.GET(&amp;quot;todo&amp;quot;, Controllers.GetTodos)
+		v1.POST(&amp;quot;todo&amp;quot;, Controllers.CreateATodo)
+		v1.GET(&amp;quot;todo/:id&amp;quot;, Controllers.GetATodo)
+		v1.PUT(&amp;quot;todo/:id&amp;quot;, Controllers.UpdateATodo)
+		v1.DELETE(&amp;quot;todo/:id&amp;quot;, Controllers.DeleteATodo)
+	}
+	return r
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;models-database-queries&#34;&gt;Models: Database queries&lt;/h2&gt;
+&lt;p&gt;Let’s write all the Database queries which we will be required to create APIs which includes: fetching all the records from table todo, insert a record, fetch a specific record, update an existing record, delete a record.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;package Models
+
+import (
+	&amp;quot;../Config&amp;quot;
+	&amp;quot;fmt&amp;quot;
+	_ &amp;quot;github.com/go-sql-driver/mysql&amp;quot;
+)
+
+//fetch all todos at once
+func GetAllTodos(todo *[]Todo) (err error) {
+	if err = Config.DB.Find(todo).Error; err != nil {
+		return err
+	}
+	return nil
+}
+
+//insert a todo
+func CreateATodo(todo *Todo) (err error) {
+	if err = Config.DB.Create(todo).Error; err != nil {
+		return err
+	}
+	return nil
+}
+
+//fetch one todo
+func GetATodo(todo *Todo, id string) (err error) {
+	if err := Config.DB.Where(&amp;quot;id = ?&amp;quot;, id).First(todo).Error; err != nil {
+		return err
+	}
+	return nil
+}
+
+//update a todo
+func UpdateATodo(todo *Todo, id string) (err error) {
+	fmt.Println(todo)
+	Config.DB.Save(todo)
+	return nil
+}
+
+//delete a todo
+func DeleteATodo(todo *Todo, id string) (err error) {
+	Config.DB.Where(&amp;quot;id = ?&amp;quot;, id).Delete(todo)
+	return nil
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;create-an-api-post-todo&#34;&gt;Create an API: POST Todo&lt;/h2&gt;
+&lt;p&gt;GIN provides methods(Must bind, Should bind) to bind request body into type which supports JSON, XML, YAML and form values.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;c.BindJSON(&amp;amp;todo)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;So here it will bind request body to &lt;strong&gt;Models.Todo&lt;/strong&gt; (when binding from JSON, set json:&amp;ldquo;fieldname&amp;rdquo;) which is to:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;type Todo struct {
+     ID uint            `json:&amp;quot;id&amp;quot;`
+     Title string       `json:&amp;quot;title&amp;quot;`
+     Description string `json:&amp;quot;description&amp;quot;`
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;We can add validations to this struct as well, for eg: binding:”required” will return an error if it has empty value while binding.
+Make a DB call to create a todo which is being handled by CreateATodo() written in Models/Todo.go. If it returns an error, call &lt;strong&gt;AbortWithStatus&lt;/strong&gt; which calls &lt;code&gt;Abort()&lt;/code&gt; and writes the error code (We are using net/http package for &lt;strong&gt;StatusNotFound&lt;/strong&gt; and StatusOK codes).&lt;/p&gt;
+&lt;p&gt;POST API to create a TODO:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;func CreateATodo(c *gin.Context) {
+	var todo Models.Todo
+	c.BindJSON(&amp;amp;todo)
+	// DB call to create a todo
+	// Config.DB.Create(todo).Error;
+	err := Models.CreateATodo(&amp;amp;todo)
+	if err != nil {
+		c.AbortWithStatus(http.StatusNotFound)
+	} else {
+		c.JSON(http.StatusOK, todo)
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;run-the-server&#34;&gt;RUN the server&lt;/h2&gt;
+&lt;p&gt;Let’s get ready to combine DB config, Models, Routes, APIs into main.go. &lt;strong&gt;gorm.Open()&lt;/strong&gt; initialize a new DB connection:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;db, err := gorm.Open(&amp;quot;mysql&amp;quot;, &amp;quot;user:password@/dbname?charset=utf8&amp;amp;parseTime=True&amp;amp;loc=Local&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;AutoMigrate()&lt;/strong&gt; automatically migrates your schema, to keep your schema update to date.&lt;/p&gt;
+&lt;p&gt;One thing to note here is that AutoMigrate() will only create tables, missing columns and missing indexes, and won’t modify existing column’s data/type.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;db.AutoMigrate(&amp;amp;Models.Todo{})
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Setup the routes and run the server. Run() will listen and serve on 8080 by default.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;r.Run()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;main.go:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;package main
+
+import (
+	&amp;quot;fmt&amp;quot;
+	&amp;quot;./Config&amp;quot;
+	&amp;quot;./Models&amp;quot;
+	&amp;quot;./Routes&amp;quot;
+	&amp;quot;github.com/jinzhu/gorm&amp;quot;
+)
+
+var err error
+
+func main() {
+
+	// Creating a connection to the database
+	Config.DB, err = gorm.Open(&amp;quot;mysql&amp;quot;, Config.DbURL(Config.BuildDBConfig()))
+
+	if err != nil {
+		fmt.Println(&amp;quot;statuse: &amp;quot;, err)
+	}
+
+	defer Config.DB.Close()
+
+	// run the migrations: todo struct
+	Config.DB.AutoMigrate(&amp;amp;Models.Todo{})
+
+	//setup routes 
+	r := Routes.SetupRouter()
+
+	// running
+	r.Run()
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Perfect!! We are all set now. Let’s run this project:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;go run main.go
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And I can see an Engine instance has been created and the APIs are running:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://example.org/images/running-server.png&#34; alt=&#34;A running GO server&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Likewise, all are APIs are working as expected. If you find any kind of difficulty following the above steps,please check this &lt;a href=&#34;https://github.com/ektagarg/gin-gorm-todo-app&#34;&gt;repo&lt;/a&gt; and run:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/ektagarg/gin-gorm-todo-app
+&lt;/code&gt;&lt;/pre&gt;- http://example.org/posts/todo-app-using-gin/ - </description>
+        </item>
+    
+    
+  </channel>
+</rss> 
