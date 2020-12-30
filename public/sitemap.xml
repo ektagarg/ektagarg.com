@@ -3,52 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>/</loc>
     <lastmod>2020-12-30T16:08:56+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/webapps/</loc>
+    <loc>/posts/webapps/</loc>
     <lastmod>2020-12-30T16:08:56+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/</loc>
+    <loc>/posts/</loc>
     <lastmod>2020-12-30T16:08:56+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>/categories/</loc>
     <lastmod>2020-12-30T02:01:58+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/gin/</loc>
+    <loc>/tags/gin/</loc>
     <lastmod>2020-12-30T02:01:58+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/golang/</loc>
+    <loc>/tags/golang/</loc>
     <lastmod>2020-12-30T02:01:58+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/categories/golang/</loc>
+    <loc>/categories/golang/</loc>
     <lastmod>2020-12-30T02:01:58+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/todo-app-using-gin/</loc>
+    <loc>/posts/todo-app-using-gin/</loc>
     <lastmod>2020-12-30T02:01:58+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/rest/</loc>
+    <loc>/tags/rest/</loc>
     <lastmod>2020-12-30T02:01:58+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>/tags/</loc>
     <lastmod>2020-12-30T02:01:58+05:30</lastmod>
   </url>
   

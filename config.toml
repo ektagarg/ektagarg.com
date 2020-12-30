@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "/"
 DefaultContentLanguage = "en" # Theme's display language, supports: en, fr, zh, zh-hant
 languageCode = "en-us"
 title = "Blog by Ekta"

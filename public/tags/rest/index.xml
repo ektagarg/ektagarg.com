@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>REST on Blog by Ekta</title>
-    <link>http://example.org/tags/rest/</link>
+    <link>/tags/rest/</link>
     <description>Recent content in REST on Blog by Ekta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 30 Dec 2020 02:01:58 +0530</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/rest/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/rest/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Golang: A Todo App using GIN</title>
-      <link>http://example.org/posts/todo-app-using-gin/</link>
+      <link>/posts/todo-app-using-gin/</link>
       <pubDate>Wed, 30 Dec 2020 02:01:58 +0530</pubDate>
       
-      <guid>http://example.org/posts/todo-app-using-gin/</guid>
+      <guid>/posts/todo-app-using-gin/</guid>
       <description>Gin is a high-performance micro-framework that can be used to build web applications. It allows you to write middleware that can be plugged into one or more request handlers or groups of request handlers.
 It is the most popular framework in Golang. Look at the picture above, this framework has the highest no. of stars on Github.com
 Goals By the end of this tutorial, you will:
