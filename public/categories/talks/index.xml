@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Talks on Blog by Ekta</title>
+    <link>https://blog.ektagarg.com/categories/talks/</link>
+    <description>Recent content in Talks on Blog by Ekta</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 31 Dec 2020 09:01:58 +0530</lastBuildDate>
+    
+	<atom:link href="https://blog.ektagarg.com/categories/talks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tech talks 2020</title>
+      <link>https://blog.ektagarg.com/posts/goodbye-2020/</link>
+      <pubDate>Thu, 31 Dec 2020 09:01:58 +0530</pubDate>
+      
+      <guid>https://blog.ektagarg.com/posts/goodbye-2020/</guid>
+      <description>This year has been a rollar coaster ride for me, and I guess, for most people. Things were so uncertain. Even during this time of uncertainity, some of the tech communities have gone completely online and done a tremendous job on organizing conferences. This blog is about all the talks in gave in various conferences this year and all of them are related to Go.
+Go One of the great things which I feel Go offers is clarity and ease-of-use.</description>
+    </item>
+    
+  </channel>
+</rss>

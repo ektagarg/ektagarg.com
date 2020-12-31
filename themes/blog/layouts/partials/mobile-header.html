@@ -64,9 +64,16 @@
      v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
     <a href="{{.Site.BaseURL}}">
         <div class="single-column-header-title">{{.Site.Title}}</div>
-        {{ with .Site.Params.subtitle }}
-        <div class="single-column-header-subtitle">{{.}}</div>
-        {{ end }}
+        <!-- {{ with .Site.Params.subtitle }} -->
+        <div class="single-column-header-subtitle">
+                <div class="social-media">
+                        <a href="https://github.com/ektagarg" class="fa fa-github"></a>
+                        <a href="https://twitter.com/_ektagarg" class="fa fa-twitter"></a>
+                        <a href="https://www.linkedin.com/in/ekta-garg-bb9a48a3/" class="fa fa-linkedin"></a>
+        
+                </div>
+        </div>
+        <!-- {{ end }} -->
 
     </a>
 </div>

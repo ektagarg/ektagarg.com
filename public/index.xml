@@ -5,9 +5,56 @@
     <description>Recent content on Blog by Ekta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Dec 2020 16:08:56 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 31 Dec 2020 09:01:58 +0530</lastBuildDate>
     
         <atom:link href="https://blog.ektagarg.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Tech talks 2020</title>
+        <link>https://blog.ektagarg.com/posts/goodbye-2020/</link>
+        <pubDate>Thu, 31 Dec 2020 09:01:58 +0530</pubDate>
+        
+        <guid>https://blog.ektagarg.com/posts/goodbye-2020/</guid>
+        <description>Blog by Ekta https://blog.ektagarg.com/posts/goodbye-2020/ -&lt;p&gt;This year has been a rollar coaster ride for me, and I guess, for most people. Things were so uncertain. Even during this time of uncertainity, some of the tech communities have gone completely online and done a tremendous job on organizing conferences. This blog is about all the talks in gave in various conferences this year and all of them are related to &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;go&#34;&gt;Go&lt;/h2&gt;
+&lt;p&gt;One of the great things which I feel &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; offers is &lt;strong&gt;clarity&lt;/strong&gt; and &lt;strong&gt;ease-of-use&lt;/strong&gt;. I have started working in Go around an year and half back and I am still exploring a lot of its features.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Go is a general-purpose programming language. Write whatever you want in it and don&amp;rsquo;t worry about pinning the language, or any other technology for that matter, to a single problem domain. &lt;!-- raw HTML omitted --&gt; ~Robe Pike&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;gophercon-eu-lightning-talk&#34;&gt;Gophercon EU Lightning Talk&lt;/h2&gt;
+&lt;p&gt;After attending handfull of conferences earlier this year, I applied for a lightning talk at &lt;strong&gt;Gophercon EU&lt;/strong&gt;. My talk proposal got accepted and it was both nervous and exciting at the same time,as this was going to be my first talk at any conference.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.ektagarg.com/images/tech-talks-2020/gophercontalk.jpeg&#34; alt=&#34;Gophercon talk&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;about-the-topic&#34;&gt;About the topic:&lt;/h4&gt;
+&lt;p&gt;I have been exploring about web assembly for quite some time. I created a simple project in &lt;strong&gt;GO using WASM&lt;/strong&gt; where I used &lt;a href=&#34;https://golang.org/pkg/image/&#34;&gt;image library&lt;/a&gt; of Go and used its filter functions and wrote a program to apply filters on any image and then loaded it into the browser using WASM. So my talk was around this topic only &amp;ldquo;Running Go in browsers using WASM&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;And, It was time to review my own talk. There are so many things which I got to learn about presenting a talk, time management, live coding, demo etc. etc.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.ektagarg.com/images/tech-talks-2020/gocon-twitter.png&#34; alt=&#34;Project structure for GIN-TODO-APP&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Here, If want to check out the talk:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=9cSO2Mg0h1M&amp;amp;t=252s&amp;amp;ab_channel=GopherConEurope&#34;&gt;&lt;img src=&#34;https://blog.ektagarg.com/images/tech-talks-2020/gophercon-video.png&#34; alt=&#34;Watch Gophercon EU talk&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I want to thank &lt;a href=&#34;https://twitter.com/NataliePis&#34;&gt;Natalie&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/pbabbicola&#34;&gt;Paula&lt;/a&gt; and entire &lt;a href=&#34;https://twitter.com/gopherconeu&#34;&gt;Gophercon EU&lt;/a&gt; team for organising, giving me an opportunity to talk, and they have been super supportive the whole time.&lt;/p&gt;
+&lt;h2 id=&#34;gophercon-turkey-talk&#34;&gt;Gophercon Turkey Talk&lt;/h2&gt;
+&lt;p&gt;In Gophercon lightning talk, I couldn&amp;rsquo;t present the whole topic and things I wanted to cover as it was a small 7-min talk. So I applied at Gophercon Turkey for a talk and my proposal at Gophercon Turkey got accepted.&lt;/p&gt;
+&lt;p&gt;Here, If want to check out the talk:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=UJb0EZclURA&amp;amp;t=39s&amp;amp;ab_channel=GoT%C3%BCrkiye&#34;&gt;&lt;img src=&#34;https://blog.ektagarg.com/images/tech-talks-2020/turkeyyoutube.png&#34; alt=&#34;Watch Gophercon Turkey talk&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This time, I was able to cover the topic entirely in this talk, I did a little code walkthrough followed up with the demo.&lt;/p&gt;
+&lt;p&gt;Great feeling when someone finds it useful:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.ektagarg.com/images/tech-talks-2020/turkey-fan.png&#34; alt=&#34;Project structure for GIN-TODO-APP&#34;&gt;&lt;/p&gt;
+&lt;p&gt;A big thanks to &lt;a href=&#34;https://twitter.com/GoTurkiye&#34;&gt;Gophercon Turkey&lt;/a&gt; for organising the conference and giving me the opportunity to present what I wanted to.&lt;/p&gt;
+&lt;h2 id=&#34;women-who-go-delhi-chapter&#34;&gt;Women-Who-GO Delhi chapter&lt;/h2&gt;
+&lt;p&gt;This is a local GO community, where they organize meetups and encourage people to talk/listen/learn about Golang. Here I gave two talks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;one was about using REST framework (GIN) in Golang.&lt;/li&gt;
+&lt;li&gt;Another talk was about Testing in Golang.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These talks were very beginner centric talks.&lt;/p&gt;
+&lt;p&gt;Here, If you want to checkout testing talk:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=l9mxb34YHNA&amp;amp;t=192s&amp;amp;ab_channel=WomenWhoGoDelhiChapter&#34;&gt;&lt;img src=&#34;https://blog.ektagarg.com/images/tech-talks-2020/testing-yt.png&#34; alt=&#34;Golang testing&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I would like to thank &lt;a href=&#34;https://twitter.com/iamrashminagpal&#34;&gt;Rashmi Nagpal&lt;/a&gt; for organizing these meetups and encouraging people in speaking and attending talks.&lt;/p&gt;
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;Be part of tech communities, open source, learn, explore as much as you can. If you are a newbie or an experienced in Go, I would encourage you to join this &lt;a href=&#34;gophers.slack.com&#34;&gt;slack channel&lt;/a&gt;.&lt;/p&gt;
+- https://blog.ektagarg.com/posts/goodbye-2020/ - </description>
+        </item>
     
     
     
@@ -84,7 +131,7 @@ Let&amp;rsquo;s have a look at all the request methods:&lt;/p&gt;
 go get github.com/gin-gonic/gin
 go get github.com/jinzhu/gorm
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;project-structure&#34;&gt;Project Structure:&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.ektagarg.com/images/project-structure.png&#34; alt=&#34;Project structure for GIN-TODO-APP&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.ektagarg.com/images/gin/project-structure.png&#34; alt=&#34;Project structure for GIN-TODO-APP&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;list-of-apis&#34;&gt;List of APIs:&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;GET: /v1/todo 
 POST: /v1/todo
@@ -285,7 +332,7 @@ func main() {
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Perfect!! We are all set now. Let’s run this project:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;go run main.go
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And I can see an Engine instance has been created and the APIs are running:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.ektagarg.com/images/running-server.png&#34; alt=&#34;A running GO server&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.ektagarg.com/images/gin/running-server.png&#34; alt=&#34;A running GO server&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Likewise, all are APIs are working as expected. If you find any kind of difficulty following the above steps,please check this &lt;a href=&#34;https://github.com/ektagarg/gin-gorm-todo-app&#34;&gt;repo&lt;/a&gt; and run:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;git clone https://github.com/ektagarg/gin-gorm-todo-app
 &lt;/code&gt;&lt;/pre&gt;- https://blog.ektagarg.com/posts/todo-app-using-gin/ - </description>

@@ -3,7 +3,7 @@ title: "Golang: A Todo App using GIN"
 date: 2020-12-30T02:01:58+05:30
 description: "Gin is a web framework written in Go(Golang). If you need performance and good productivity, use Gin, you’ll love it."
 tags: [Gin, Golang, REST]
-featured_image: "/images/gin.png"
+featured_image: "/images/gin/gin.png"
 categories: Golang
 comment : false
 ---
@@ -33,7 +33,7 @@ go get github.com/jinzhu/gorm
 
 ### Project Structure:
 
-![Project structure for GIN-TODO-APP](/images/project-structure.png)
+![Project structure for GIN-TODO-APP](/images/gin/project-structure.png)
 
 ### List of APIs:
 
@@ -297,7 +297,7 @@ go run main.go
 
 And I can see an Engine instance has been created and the APIs are running:
 
-![A running GO server](/images/running-server.png)
+![A running GO server](/images/gin/running-server.png)
 
 Likewise, all are APIs are working as expected. If you find any kind of difficulty following the above steps,please check this [repo](https://github.com/ektagarg/gin-gorm-todo-app) and run:
 

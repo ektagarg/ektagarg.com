@@ -4,22 +4,47 @@
   
   <url>
     <loc>https://blog.ektagarg.com/</loc>
-    <lastmod>2020-12-30T16:08:56+05:30</lastmod>
+    <lastmod>2020-12-31T09:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.ektagarg.com/categories/</loc>
+    <lastmod>2020-12-31T09:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.ektagarg.com/tags/gophercon/</loc>
+    <lastmod>2020-12-31T09:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.ektagarg.com/posts/</loc>
+    <lastmod>2020-12-31T09:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.ektagarg.com/tags/</loc>
+    <lastmod>2020-12-31T09:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.ektagarg.com/tags/talks/</loc>
+    <lastmod>2020-12-31T09:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.ektagarg.com/categories/talks/</loc>
+    <lastmod>2020-12-31T09:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.ektagarg.com/posts/goodbye-2020/</loc>
+    <lastmod>2020-12-31T09:01:58+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://blog.ektagarg.com/posts/webapps/</loc>
     <lastmod>2020-12-30T16:08:56+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.ektagarg.com/posts/</loc>
-    <lastmod>2020-12-30T16:08:56+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.ektagarg.com/categories/</loc>
-    <lastmod>2020-12-30T02:01:58+05:30</lastmod>
   </url>
   
   <url>
@@ -44,11 +69,6 @@
   
   <url>
     <loc>https://blog.ektagarg.com/tags/rest/</loc>
-    <lastmod>2020-12-30T02:01:58+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.ektagarg.com/tags/</loc>
     <lastmod>2020-12-30T02:01:58+05:30</lastmod>
   </url>
   

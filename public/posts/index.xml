@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Blog by Ekta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Dec 2020 16:08:56 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 31 Dec 2020 09:01:58 +0530</lastBuildDate>
     
 	<atom:link href="https://blog.ektagarg.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tech talks 2020</title>
+      <link>https://blog.ektagarg.com/posts/goodbye-2020/</link>
+      <pubDate>Thu, 31 Dec 2020 09:01:58 +0530</pubDate>
+      
+      <guid>https://blog.ektagarg.com/posts/goodbye-2020/</guid>
+      <description>This year has been a rollar coaster ride for me, and I guess, for most people. Things were so uncertain. Even during this time of uncertainity, some of the tech communities have gone completely online and done a tremendous job on organizing conferences. This blog is about all the talks in gave in various conferences this year and all of them are related to Go.
+Go One of the great things which I feel Go offers is clarity and ease-of-use.</description>
+    </item>
     
     <item>
       <title>How web applications work?</title>

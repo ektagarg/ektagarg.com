@@ -1,19 +1,20 @@
 <div ref="sideContainer" class="side-container">
+    <div class = "nav-head active">
     {{ if eq .Title .Site.Title}}
-    <a class="a-block nav-head active" href="{{.Site.BaseURL}}">
+    <a class="a-block active" href="{{.Site.BaseURL}}">
     {{ else }}
-    <a class="a-block nav-head false" href="{{.Site.BaseURL}}">
+    <a class="a-block false" href="{{.Site.BaseURL}}">
     {{ end }}
         <div class="nav-title">
             {{.Site.Title}}
         </div>
-        {{ with .Site.Params.subtitle }}
         <div class="nav-subtitle">
-            {{.}}
+            <a href="https://github.com/ektagarg"><i class="fa fa-github social-media"></i></a>
+            <a href="https://twitter.com/_ektagarg"><i class="fa fa-twitter social-media" ></i></a>
+            <a href="https://www.linkedin.com/in/ekta-garg-bb9a48a3/"><i class="fa fa-linkedin social-media"></i></a>
         </div>
-        {{ end }}
     </a>
-
+    </div>
     <div class="nav-link-list">
         {{ $current := .Permalink | absLangURL }}
         {{ range .Site.Menus.main }}
