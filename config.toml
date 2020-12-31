@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://blog.ektagarg.com"
 DefaultContentLanguage = "en" # Theme's display language, supports: en, fr, zh, zh-hant
 languageCode = "en-us"
 title = "Blog by Ekta"
@@ -18,9 +18,10 @@ theme = "blog"
     tabWidth = 4
 
 [params]
-subtitle = "(Things I am working on)"
+subtitle = "(Hey! I am an engineer at Grofers. Welcome to my Blog!)"
 disqusShortname = "ektagarg"
 enableGitalk = true
+favicon = "images/favicon.ico"
 
 # Twitter Card and Open Graph settings
 enableOpenGraph = true

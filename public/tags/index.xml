@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Blog by Ekta</title>
-    <link>/tags/</link>
+    <link>https://blog.ektagarg.com/tags/</link>
     <description>Recent content in Tags on Blog by Ekta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 30 Dec 2020 02:01:58 +0530</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.ektagarg.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Gin</title>
-      <link>/tags/gin/</link>
+      <link>https://blog.ektagarg.com/tags/gin/</link>
       <pubDate>Wed, 30 Dec 2020 02:01:58 +0530</pubDate>
       
-      <guid>/tags/gin/</guid>
+      <guid>https://blog.ektagarg.com/tags/gin/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Golang</title>
-      <link>/tags/golang/</link>
+      <link>https://blog.ektagarg.com/tags/golang/</link>
       <pubDate>Wed, 30 Dec 2020 02:01:58 +0530</pubDate>
       
-      <guid>/tags/golang/</guid>
+      <guid>https://blog.ektagarg.com/tags/golang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>REST</title>
-      <link>/tags/rest/</link>
+      <link>https://blog.ektagarg.com/tags/rest/</link>
       <pubDate>Wed, 30 Dec 2020 02:01:58 +0530</pubDate>
       
-      <guid>/tags/rest/</guid>
+      <guid>https://blog.ektagarg.com/tags/rest/</guid>
       <description></description>
     </item>
     

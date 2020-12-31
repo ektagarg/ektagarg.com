@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Blog by Ekta</title>
-    <link>/categories/</link>
+    <link>https://blog.ektagarg.com/categories/</link>
     <description>Recent content in Categories on Blog by Ekta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 30 Dec 2020 02:01:58 +0530</lastBuildDate>
     
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.ektagarg.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Golang</title>
-      <link>/categories/golang/</link>
+      <link>https://blog.ektagarg.com/categories/golang/</link>
       <pubDate>Wed, 30 Dec 2020 02:01:58 +0530</pubDate>
       
-      <guid>/categories/golang/</guid>
+      <guid>https://blog.ektagarg.com/categories/golang/</guid>
       <description></description>
     </item>
     
