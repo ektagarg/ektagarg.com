@@ -3,27 +3,57 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://blog.ektagarg.com/tags/automation/</loc>
+    <lastmod>2021-01-01T09:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.ektagarg.com/categories/automation/</loc>
+    <lastmod>2021-01-01T09:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.ektagarg.com/</loc>
-    <lastmod>2020-12-31T09:01:58+05:30</lastmod>
+    <lastmod>2021-01-01T09:01:58+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://blog.ektagarg.com/categories/</loc>
+    <lastmod>2021-01-01T09:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.ektagarg.com/posts/</loc>
+    <lastmod>2021-01-01T09:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.ektagarg.com/posts/slack-bot-using-zapier/</loc>
+    <lastmod>2021-01-01T09:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.ektagarg.com/tags/slack-bots/</loc>
+    <lastmod>2021-01-01T09:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.ektagarg.com/tags/</loc>
+    <lastmod>2021-01-01T09:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.ektagarg.com/tags/zapier/</loc>
+    <lastmod>2021-01-01T09:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.ektagarg.com/tags/go/</loc>
     <lastmod>2020-12-31T09:01:58+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://blog.ektagarg.com/tags/gophercon/</loc>
-    <lastmod>2020-12-31T09:01:58+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.ektagarg.com/posts/</loc>
-    <lastmod>2020-12-31T09:01:58+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.ektagarg.com/tags/</loc>
     <lastmod>2020-12-31T09:01:58+05:30</lastmod>
   </url>
   
@@ -53,12 +83,7 @@
   </url>
   
   <url>
-    <loc>https://blog.ektagarg.com/tags/golang/</loc>
-    <lastmod>2020-12-30T02:01:58+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.ektagarg.com/categories/golang/</loc>
+    <loc>https://blog.ektagarg.com/categories/go/</loc>
     <lastmod>2020-12-30T02:01:58+05:30</lastmod>
   </url>
   

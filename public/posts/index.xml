@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Blog by Ekta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 31 Dec 2020 09:01:58 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 01 Jan 2021 09:01:58 +0530</lastBuildDate>
     
 	<atom:link href="https://blog.ektagarg.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Slack bot using [Zapier &#43; Redash &#43; Google sheets &#43; Slack]</title>
+      <link>https://blog.ektagarg.com/posts/slack-bot-using-zapier/</link>
+      <pubDate>Fri, 01 Jan 2021 09:01:58 +0530</pubDate>
+      
+      <guid>https://blog.ektagarg.com/posts/slack-bot-using-zapier/</guid>
+      <description>What are we going to do?
+Creating a slack bot that will post a message on a specific channel at a certain time (say, 9 am) about the total number of orders placed on your website in the last 24 hours.
+Assumptions  Using slack for communication, organization of your work. Know how to write DB queries, I will be using redash for writing queries. Know the basics of google sheets.</description>
+    </item>
     
     <item>
       <title>Tech talks 2020</title>
@@ -17,7 +28,7 @@
       <pubDate>Thu, 31 Dec 2020 09:01:58 +0530</pubDate>
       
       <guid>https://blog.ektagarg.com/posts/goodbye-2020/</guid>
-      <description>This year has been a roller coaster ride for me, and I guess, for most people. Things were so uncertain. Even during this time of uncertainty, some of the tech communities have gone completely online and done a tremendous job of organizing conferences. This blog is about all the talks in gave at various conferences this year and all of them are related to Go.
+      <description>This year has been a roller coaster ride for me, and I guess, for most people. Things were so uncertain. Even during this time of uncertainty, some of the tech communities have gone completely online and done a tremendous job of organizing conferences. This blog is about all the talks I gave at various conferences this year and all of them are related to Go.
 Go One of the great things which I feel Go offers is clarity and ease-of-use.</description>
     </item>
     

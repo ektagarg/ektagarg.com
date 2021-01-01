@@ -5,9 +5,78 @@
     <description>Recent content on Blog by Ekta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 31 Dec 2020 09:01:58 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 01 Jan 2021 09:01:58 +0530</lastBuildDate>
     
         <atom:link href="https://blog.ektagarg.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Slack bot using [Zapier &#43; Redash &#43; Google sheets &#43; Slack]</title>
+        <link>https://blog.ektagarg.com/posts/slack-bot-using-zapier/</link>
+        <pubDate>Fri, 01 Jan 2021 09:01:58 +0530</pubDate>
+        
+        <guid>https://blog.ektagarg.com/posts/slack-bot-using-zapier/</guid>
+        <description>Blog by Ekta https://blog.ektagarg.com/posts/slack-bot-using-zapier/ -&lt;p&gt;&lt;strong&gt;What are we going to do?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Creating a slack bot that will post a message on a specific channel at a certain time
+(say, 9 am) about the total number of orders placed on your website in the last 24 hours.&lt;/p&gt;
+&lt;h2 id=&#34;assumptions&#34;&gt;Assumptions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Using slack for communication, organization of your work.&lt;/li&gt;
+&lt;li&gt;Know how to write DB queries, I will be using &lt;a href=&#34;https://redash.io/&#34;&gt;redash&lt;/a&gt; for writing queries.&lt;/li&gt;
+&lt;li&gt;Know the basics of google sheets.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tools-and-terms&#34;&gt;Tools and terms&lt;/h2&gt;
+&lt;p&gt;These are some terms we will be using while creating this slackbot. Please read them if you have never used zapier earlier.&lt;/p&gt;
+&lt;h3 id=&#34;zapier&#34;&gt;Zapier&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://zapier.com/&#34;&gt;Zapier&lt;/a&gt; simply helps you save your time with automation. You can connect multiple apps to automate repetitive/boring tasks without coding or relying on developers to build integration.&lt;/p&gt;
+&lt;h3 id=&#34;zap&#34;&gt;Zap&lt;/h3&gt;
+&lt;p&gt;A Zap is an automated workflow that connects your apps and services. You can create a zap that will fetch some data and then trigger events based on conditional actions you have specified. When you turn your Zap on, it will run the action steps every time the trigger event occurs.&lt;/p&gt;
+&lt;h3 id=&#34;trigger&#34;&gt;Trigger&lt;/h3&gt;
+&lt;p&gt;A trigger is an event that starts a Zap. For example, in this case, where we are creating a slack bot, each time when there is new data from the query, you will receive a message on slack about the updated data.&lt;/p&gt;
+&lt;h3 id=&#34;redash&#34;&gt;Redash&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://redash.io/&#34;&gt;Redash&lt;/a&gt; helps you write queries to your data source, can schedule your queries (fetch at a particular time of the day, week), create dashboards, visualizations, etc.&lt;/p&gt;
+&lt;h2 id=&#34;steps-to-follow&#34;&gt;Steps to follow&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Create a query on redash which will give you a total number of orders placed in the last 24 hours.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.ektagarg.com/images/slack-Bot/query.png&#34; alt=&#34;Query result&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;I am setting a refresh schedule of every day at 08:45 am. Because I need this total order stats update once a day in the morning.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.ektagarg.com/images/slack-Bot/refresh-schedule.png&#34; alt=&#34;Query result&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Create a google sheet that will be fetching data from this redash query. We will be using IMPORTDATA() function which allows you to quickly import the data from the URL of a CSV.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;IMPORTDATA(&amp;quot;https://reports.xyz.io/api/queries/13292/results.csv?api_key=nlnOwQqweKZGsTIk7oE6ErVRaqK3D8weVdaqkcO5C
+&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Your sheet will look like this:
+&lt;img src=&#34;https://blog.ektagarg.com/images/slack-Bot/sheet.png&#34; alt=&#34;Query result&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Next, set up an account on &lt;a href=&#34;https://zapier.com&#34;&gt;zapier&lt;/a&gt;. Now, we have to create a zap using Google sheets + Slack. Because we want to trigger an event which is a slack message whenever there is any change in the spreadsheet.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select Google sheets as your app in &lt;code&gt;Trigger&lt;/code&gt;, add a trigger event which can be a New spreadsheet, New worksheet, New spreadsheet row (depending on the data updates in your sheet).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Connect your google account which has this daily updates sheet and set up a trigger by selecting a spreadsheet, worksheet, a trigger column. Click on the test trigger to load the latest data present in your sheet. This will look like this.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.ektagarg.com/images/slack-Bot/zap.png&#34; alt=&#34;Query result&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;After setting the Google sheet, we have to send a message on slack that we got new data in the sheet. Similar to Google sheets, Choose app and event (slack), choose your slack account, and set up actions like this:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.ektagarg.com/images/slack-Bot/slack-actions.png&#34; alt=&#34;Query result&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;You are all set up after adding all the actions, Now we are good to test the action. Before clicking on Test and continue, Verify all the options, data, and format.
+Let&amp;rsquo;s click test and continue and check on slack if we got the message. Yes, here is the message, I got:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.ektagarg.com/images/slack-Bot/slack-msg.png&#34; alt=&#34;slack message&#34;&gt;&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s it!! You just created a slack bot that will take care of updating you every day about the total number of orders on your website in a day.
+Similarly, you can automate a lot of your boring stuff using zapier.&lt;/p&gt;
+- https://blog.ektagarg.com/posts/slack-bot-using-zapier/ - </description>
+        </item>
     
     
     
@@ -17,7 +86,7 @@
         <pubDate>Thu, 31 Dec 2020 09:01:58 +0530</pubDate>
         
         <guid>https://blog.ektagarg.com/posts/goodbye-2020/</guid>
-        <description>Blog by Ekta https://blog.ektagarg.com/posts/goodbye-2020/ -&lt;p&gt;This year has been a roller coaster ride for me, and I guess, for most people. Things were so uncertain. Even during this time of uncertainty, some of the tech communities have gone completely online and done a tremendous job of organizing conferences. This blog is about all the talks in gave at various conferences this year and all of them are related to &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt;.&lt;/p&gt;
+        <description>Blog by Ekta https://blog.ektagarg.com/posts/goodbye-2020/ -&lt;p&gt;This year has been a roller coaster ride for me, and I guess, for most people. Things were so uncertain. Even during this time of uncertainty, some of the tech communities have gone completely online and done a tremendous job of organizing conferences. This blog is about all the talks I gave at various conferences this year and all of them are related to &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;go&#34;&gt;Go&lt;/h2&gt;
 &lt;p&gt;One of the great things which I feel &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; offers is &lt;strong&gt;clarity&lt;/strong&gt; and &lt;strong&gt;ease-of-use&lt;/strong&gt;. I have started working in Go around a year and a half back and I am still exploring a lot of its features.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -25,18 +94,30 @@
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;gophercon-eu-lightning-talk&#34;&gt;Gophercon EU Lightning Talk&lt;/h2&gt;
 &lt;p&gt;After attending a handful of conferences earlier this year, I applied for a lightning talk at &lt;strong&gt;Gophercon EU&lt;/strong&gt;. My talk proposal got accepted and it was both nervous and exciting at the same time, as this was going to be my first talk at any conference.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.ektagarg.com/images/tech-talks-2020/gophercontalk.jpeg&#34; alt=&#34;Gophercon talk&#34;&gt;&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I am very excited to share that my lightning talk at &lt;a href=&#34;https://twitter.com/gopherconeu?ref_src=twsrc%5Etfw&#34;&gt;@gopherconeu&lt;/a&gt; has been accepted! 😍&lt;/p&gt;&amp;mdash; Ekta Garg (@_ektagarg) &lt;a href=&#34;https://twitter.com/_ektagarg/status/1271769409992880136?ref_src=twsrc%5Etfw&#34;&gt;June 13, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
 &lt;h4 id=&#34;about-the-topic&#34;&gt;About the topic:&lt;/h4&gt;
 &lt;p&gt;I have been exploring web assembly for quite some time. I created a simple project in &lt;strong&gt;GO using WASM&lt;/strong&gt; where I used &lt;a href=&#34;https://golang.org/pkg/image/&#34;&gt;image library&lt;/a&gt; of Go and used its filter functions and wrote a program to apply filters on any image and then loaded it into the browser using WASM. So my talk was around this topic only &amp;ldquo;Running Go in browsers using WASM&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;And, It was time to review my own talk. There are so many things which I got to learn about presenting a talk, time management, live coding, demo, etc.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.ektagarg.com/images/tech-talks-2020/gocon-twitter.png&#34; alt=&#34;Project structure for GIN-TODO-APP&#34;&gt;&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Next on the &lt;a href=&#34;https://twitter.com/hashtag/GopherConEU?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GopherConEU&lt;/a&gt; lightning talks video spotlight:&lt;br&gt;&lt;br&gt;Ekta Garg &lt;a href=&#34;https://twitter.com/_ektagarg?ref_src=twsrc%5Etfw&#34;&gt;@_ektagarg&lt;/a&gt;, Software Engineer at &lt;a href=&#34;https://twitter.com/groferseng?ref_src=twsrc%5Etfw&#34;&gt;@groferseng&lt;/a&gt; in India, talks about running &lt;a href=&#34;https://twitter.com/hashtag/golang?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#golang&lt;/a&gt; in browsers using &lt;a href=&#34;https://twitter.com/hashtag/Webassembly?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Webassembly&lt;/a&gt;!&lt;a href=&#34;https://twitter.com/WasmWeekly?ref_src=twsrc%5Etfw&#34;&gt;@WasmWeekly&lt;/a&gt; &lt;a href=&#34;https://twitter.com/Grofers?ref_src=twsrc%5Etfw&#34;&gt;@grofers&lt;/a&gt;&lt;a href=&#34;https://t.co/KFoszLrFbz&#34;&gt;https://t.co/KFoszLrFbz&lt;/a&gt;&lt;/p&gt;&amp;mdash; GopherCon Europe (@gopherconeu) &lt;a href=&#34;https://twitter.com/gopherconeu/status/1296721449898704898?ref_src=twsrc%5Etfw&#34;&gt;August 21, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
 &lt;p&gt;Here, If want to check out the talk:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=9cSO2Mg0h1M&amp;amp;t=252s&amp;amp;ab_channel=GopherConEurope&#34;&gt;&lt;img src=&#34;https://blog.ektagarg.com/images/tech-talks-2020/gophercon-video.png&#34; alt=&#34;Watch Gophercon EU talk&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/9cSO2Mg0h1M&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;p&gt;I want to thank &lt;a href=&#34;https://twitter.com/NataliePis&#34;&gt;Natalie&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/pbabbicola&#34;&gt;Paula&lt;/a&gt; ,and the entire &lt;a href=&#34;https://twitter.com/gopherconeu&#34;&gt;Gophercon EU&lt;/a&gt; team for organizing, giving me an opportunity to talk, and they have been super supportive the whole time.&lt;/p&gt;
 &lt;h2 id=&#34;gophercon-turkey-talk&#34;&gt;Gophercon Turkey Talk&lt;/h2&gt;
 &lt;p&gt;In Gophercon lightning talk, I couldn&amp;rsquo;t present the whole topic and things I wanted to cover as it was a small 7-min talk. So I applied at Gophercon Turkey for a talk and my proposal at Gophercon Turkey got accepted.&lt;/p&gt;
 &lt;p&gt;Here, If you want to check out the talk:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=UJb0EZclURA&amp;amp;t=39s&amp;amp;ab_channel=GoT%C3%BCrkiye&#34;&gt;&lt;img src=&#34;https://blog.ektagarg.com/images/tech-talks-2020/turkeyyoutube.png&#34; alt=&#34;Watch Gophercon Turkey talk&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/UJb0EZclURA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;p&gt;This time, I was able to cover the topic entirely in this talk, I did a little code walkthrough followed up with the demo.&lt;/p&gt;
 &lt;p&gt;Great feeling when someone finds it useful:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog.ektagarg.com/images/tech-talks-2020/turkey-fan.png&#34; alt=&#34;Project structure for GIN-TODO-APP&#34;&gt;&lt;/p&gt;
@@ -49,11 +130,15 @@
 &lt;/ul&gt;
 &lt;p&gt;These talks were very beginner centric talks.&lt;/p&gt;
 &lt;p&gt;Here, If you want to check out the testing talk:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=l9mxb34YHNA&amp;amp;t=192s&amp;amp;ab_channel=WomenWhoGoDelhiChapter&#34;&gt;&lt;img src=&#34;https://blog.ektagarg.com/images/tech-talks-2020/testing-yt.png&#34; alt=&#34;Golang testing&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/l9mxb34YHNA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;p&gt;I would like to thank &lt;a href=&#34;https://twitter.com/iamrashminagpal&#34;&gt;Rashmi Nagpal&lt;/a&gt; for organizing these meetups and encouraging people in speaking and attending talks.&lt;/p&gt;
 &lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
 &lt;p&gt;Be part of tech communities, open-source, learn, explore as much as you can. If you are a newbie or an experienced in Go, I would encourage you to join this &lt;a href=&#34;gophers.slack.com&#34;&gt;slack channel&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Goodbye 2020! You&amp;rsquo;ve treated me well.&lt;/p&gt;
+&lt;p&gt;Goodbye 2020! You&amp;rsquo;ve treated me fine.&lt;/p&gt;
 - https://blog.ektagarg.com/posts/goodbye-2020/ - </description>
         </item>
     
@@ -142,130 +227,26 @@ DELETE: /v1/todo/:id
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Let’s start working, I would suggest you write each n every line of code by yourself, this way you’ll understand things better. So we’ll start by creating a project called GIN-TODO-APP.&lt;/p&gt;
 &lt;h2 id=&#34;setup-database&#34;&gt;Setup Database&lt;/h2&gt;
 &lt;p&gt;GORM is an ORM library written in Golang which we are using in our project. In this config file, we will be creating a function called &lt;strong&gt;BuildDBConfig()&lt;/strong&gt; where you can set up your DB host, port, username, password, and dbname and pass it to &lt;strong&gt;DbURL()&lt;/strong&gt; to create your database URL.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;package Config
-import (
-	&amp;quot;fmt&amp;quot;
-	&amp;quot;github.com/jinzhu/gorm&amp;quot;
-)
+&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/ektagarg/6b3caeaee1b7f0194ce8790c3d21c6b3.js&#34;&gt;&lt;/script&gt;
 
-var DB *gorm.DB
-
-// DBConfig represents db configuration
-type DBConfig struct {
-	Host     string
-	Port     int
-	User     string
-	DBName   string
-	Password string
-}
-
-func BuildDBConfig() *DBConfig {
-	dbConfig := DBConfig{
-		Host:     &amp;quot;0.0.0.0&amp;quot;,
-		Port:     3306,
-		User:     &amp;quot;root&amp;quot;,
-		DBName:   &amp;quot;todos&amp;quot;,
-		Password: &amp;quot;mypassword&amp;quot;,
-	}
-	return &amp;amp;dbConfig
-}
-
-func DbURL(dbConfig *DBConfig) string {
-	return fmt.Sprintf(
-		&amp;quot;%s:%s@tcp(%s:%d)/%s?charset=utf8&amp;amp;parseTime=True&amp;amp;loc=Local&amp;quot;,
-		dbConfig.User,
-		dbConfig.Password,
-		dbConfig.Host,
-		dbConfig.Port,
-		dbConfig.DBName,
-	)
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;table-and-schema&#34;&gt;Table and Schema&lt;/h2&gt;
+&lt;h2 id=&#34;table-and-schema&#34;&gt;Table and Schema&lt;/h2&gt;
 &lt;p&gt;Let’s talk about DB Structure and schema. For this project, we’ll be having just one table ‘todo’. This table will have id, title, description as its attributes.&lt;/p&gt;
 &lt;p&gt;TableName() function will be used wherever we need to access the table name.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;package Models
+&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/ektagarg/ea63891b05bad4134f98f375fffac830.js&#34;&gt;&lt;/script&gt;
 
-type Todo struct {
-	ID uint            `json:&amp;quot;id&amp;quot;`
-	Title string       `json:&amp;quot;title&amp;quot;`
-	Description string `json:&amp;quot;description&amp;quot;`
-}
-
-func (b *Todo) TableName() string {
-	return &amp;quot;todo&amp;quot;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;setup-routes-and-list-of-apis&#34;&gt;Setup routes and list of APIs&lt;/h2&gt;
+&lt;h2 id=&#34;setup-routes-and-list-of-apis&#34;&gt;Setup routes and list of APIs&lt;/h2&gt;
 &lt;p&gt;Here, we are going to set up a router using&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;r := gin.Default()
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Default returns a gin Engine instance with the Logger(write the logs to gin.DefaultWriter) and Recovery middleware already attached but if you need to start a blank gin instance with middleware attached, you should use gin.New()&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;v1 := r.Group(&amp;quot;/v1&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You can group multiple routes using Group() function, these APIs will be accessible on /v1&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;package Routes
+&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/ektagarg/eea34ca294af4c9d3a4005b7fd90e55d.js&#34;&gt;&lt;/script&gt;
 
-import (
-	&amp;quot;../Controllers&amp;quot;
-	&amp;quot;github.com/gin-gonic/gin&amp;quot;
-)
-
-func SetupRouter() *gin.Engine {
-	r := gin.Default()
-	v1 := r.Group(&amp;quot;/v1&amp;quot;)
-	{
-		v1.GET(&amp;quot;todo&amp;quot;, Controllers.GetTodos)
-		v1.POST(&amp;quot;todo&amp;quot;, Controllers.CreateATodo)
-		v1.GET(&amp;quot;todo/:id&amp;quot;, Controllers.GetATodo)
-		v1.PUT(&amp;quot;todo/:id&amp;quot;, Controllers.UpdateATodo)
-		v1.DELETE(&amp;quot;todo/:id&amp;quot;, Controllers.DeleteATodo)
-	}
-	return r
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;models-database-queries&#34;&gt;Models: Database queries&lt;/h2&gt;
+&lt;h2 id=&#34;models-database-queries&#34;&gt;Models: Database queries&lt;/h2&gt;
 &lt;p&gt;Let’s write all the Database queries which we will be required to create APIs which includes: fetching all the records from table todo, insert a record, fetch a specific record, update an existing record, delete a record.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;package Models
+&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/ektagarg/8da3903a5422930b55d3f7384896fb30.js&#34;&gt;&lt;/script&gt;
 
-import (
-	&amp;quot;../Config&amp;quot;
-	&amp;quot;fmt&amp;quot;
-	_ &amp;quot;github.com/go-sql-driver/mysql&amp;quot;
-)
-
-//fetch all todos at once
-func GetAllTodos(todo *[]Todo) (err error) {
-	if err = Config.DB.Find(todo).Error; err != nil {
-		return err
-	}
-	return nil
-}
-
-//insert a todo
-func CreateATodo(todo *Todo) (err error) {
-	if err = Config.DB.Create(todo).Error; err != nil {
-		return err
-	}
-	return nil
-}
-
-//fetch one todo
-func GetATodo(todo *Todo, id string) (err error) {
-	if err := Config.DB.Where(&amp;quot;id = ?&amp;quot;, id).First(todo).Error; err != nil {
-		return err
-	}
-	return nil
-}
-
-//update a todo
-func UpdateATodo(todo *Todo, id string) (err error) {
-	fmt.Println(todo)
-	Config.DB.Save(todo)
-	return nil
-}
-
-//delete a todo
-func DeleteATodo(todo *Todo, id string) (err error) {
-	Config.DB.Where(&amp;quot;id = ?&amp;quot;, id).Delete(todo)
-	return nil
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;create-an-api-post-todo&#34;&gt;Create an API: POST Todo&lt;/h2&gt;
+&lt;h2 id=&#34;create-an-api-post-todo&#34;&gt;Create an API: POST Todo&lt;/h2&gt;
 &lt;p&gt;GIN provides methods(Must bind, Should bind) to bind request body into type which supports JSON, XML, YAML and form values.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;c.BindJSON(&amp;amp;todo)
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;So here it will bind request body to &lt;strong&gt;Models.Todo&lt;/strong&gt; (when binding from JSON, set json:&amp;ldquo;fieldname&amp;rdquo;) which is to:&lt;/p&gt;
@@ -277,19 +258,9 @@ func DeleteATodo(todo *Todo, id string) (err error) {
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;We can add validations to this struct as well, for eg: binding:”required” will return an error if it has empty value while binding.
 Make a DB call to create a todo which is being handled by CreateATodo() written in Models/Todo.go. If it returns an error, call &lt;strong&gt;AbortWithStatus&lt;/strong&gt; which calls &lt;code&gt;Abort()&lt;/code&gt; and writes the error code (We are using net/http package for &lt;strong&gt;StatusNotFound&lt;/strong&gt; and StatusOK codes).&lt;/p&gt;
 &lt;p&gt;POST API to create a TODO:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;func CreateATodo(c *gin.Context) {
-	var todo Models.Todo
-	c.BindJSON(&amp;amp;todo)
-	// DB call to create a todo
-	// Config.DB.Create(todo).Error;
-	err := Models.CreateATodo(&amp;amp;todo)
-	if err != nil {
-		c.AbortWithStatus(http.StatusNotFound)
-	} else {
-		c.JSON(http.StatusOK, todo)
-	}
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;run-the-server&#34;&gt;RUN the server&lt;/h2&gt;
+&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/ektagarg/84636e1253f5eb8d46ae1ba5ae80d447.js&#34;&gt;&lt;/script&gt;
+
+&lt;h2 id=&#34;run-the-server&#34;&gt;RUN the server&lt;/h2&gt;
 &lt;p&gt;Let’s get ready to combine DB config, Models, Routes, APIs into main.go. &lt;strong&gt;gorm.Open()&lt;/strong&gt; initialize a new DB connection:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;db, err := gorm.Open(&amp;quot;mysql&amp;quot;, &amp;quot;user:password@/dbname?charset=utf8&amp;amp;parseTime=True&amp;amp;loc=Local&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;AutoMigrate()&lt;/strong&gt; automatically migrates your schema, to keep your schema update to date.&lt;/p&gt;

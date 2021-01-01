@@ -48,7 +48,7 @@
 
 
 
-<link rel="icon" href="https://blog.ektagarg.com/images/favicon.ico">
+<link rel="icon" href="https://blog.ektagarg.com/icons/favicon.ico">
 
 
 
@@ -164,7 +164,7 @@
 
 &copy;
 	
-	2020 Blog by Ekta
+	2021 Blog by Ekta
 	
 
     </div>
@@ -718,19 +718,13 @@
 </nav>
 <div class="single-column-header-container" ref="pageHead"
      v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
-    <a href="https://blog.ektagarg.com">
-        <div class="single-column-header-title">Blog by Ekta</div>
-        
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <div class="single-column-header-title"><a href="https://blog.ektagarg.com">Blog by Ekta</a></div>
         <div class="single-column-header-subtitle">
-                <div class="social-media">
-                        <a href="https://github.com/ektagarg" class="fa fa-github"></a>
-                        <a href="https://twitter.com/_ektagarg" class="fa fa-twitter"></a>
-                        <a href="https://www.linkedin.com/in/ekta-garg-bb9a48a3/" class="fa fa-linkedin"></a>
-        
-                </div>
+            <a href="https://github.com/ektagarg"><i class="fa fa-github social-media"></i></a>
+            <a href="https://twitter.com/_ektagarg"><i class="fa fa-twitter social-media" ></i></a>
+            <a href="https://www.linkedin.com/in/ekta-garg-bb9a48a3/"><i class="fa fa-linkedin social-media"></i></a>
         </div>
-        
-
     </a>
 </div>
 
@@ -768,7 +762,7 @@
 
                         
                             <i class="material-icons" style="">folder</i>
-                                <a href="/categories/golang">Golang</a>
+                                <a href="/categories/go">Go</a>
                                 &nbsp;
                         
 
@@ -778,7 +772,7 @@
                                 <a href="/tags/gin">Gin</a>
                                 &nbsp;
                             
-                                <a href="/tags/golang">Golang</a>
+                                <a href="/tags/go">Go</a>
                                 &nbsp;
                             
                                 <a href="/tags/rest">REST</a>
@@ -820,130 +814,26 @@ DELETE: /v1/todo/:id
 </code></pre><p>Let’s start working, I would suggest you write each n every line of code by yourself, this way you’ll understand things better. So we’ll start by creating a project called GIN-TODO-APP.</p>
 <h2 id="setup-database">Setup Database</h2>
 <p>GORM is an ORM library written in Golang which we are using in our project. In this config file, we will be creating a function called <strong>BuildDBConfig()</strong> where you can set up your DB host, port, username, password, and dbname and pass it to <strong>DbURL()</strong> to create your database URL.</p>
-<pre><code>package Config
-import (
-	&quot;fmt&quot;
-	&quot;github.com/jinzhu/gorm&quot;
-)
+<script type="application/javascript" src="https://gist.github.com/ektagarg/6b3caeaee1b7f0194ce8790c3d21c6b3.js"></script>
 
-var DB *gorm.DB
-
-// DBConfig represents db configuration
-type DBConfig struct {
-	Host     string
-	Port     int
-	User     string
-	DBName   string
-	Password string
-}
-
-func BuildDBConfig() *DBConfig {
-	dbConfig := DBConfig{
-		Host:     &quot;0.0.0.0&quot;,
-		Port:     3306,
-		User:     &quot;root&quot;,
-		DBName:   &quot;todos&quot;,
-		Password: &quot;mypassword&quot;,
-	}
-	return &amp;dbConfig
-}
-
-func DbURL(dbConfig *DBConfig) string {
-	return fmt.Sprintf(
-		&quot;%s:%s@tcp(%s:%d)/%s?charset=utf8&amp;parseTime=True&amp;loc=Local&quot;,
-		dbConfig.User,
-		dbConfig.Password,
-		dbConfig.Host,
-		dbConfig.Port,
-		dbConfig.DBName,
-	)
-}
-</code></pre><h2 id="table-and-schema">Table and Schema</h2>
+<h2 id="table-and-schema">Table and Schema</h2>
 <p>Let’s talk about DB Structure and schema. For this project, we’ll be having just one table ‘todo’. This table will have id, title, description as its attributes.</p>
 <p>TableName() function will be used wherever we need to access the table name.</p>
-<pre><code>package Models
+<script type="application/javascript" src="https://gist.github.com/ektagarg/ea63891b05bad4134f98f375fffac830.js"></script>
 
-type Todo struct {
-	ID uint            `json:&quot;id&quot;`
-	Title string       `json:&quot;title&quot;`
-	Description string `json:&quot;description&quot;`
-}
-
-func (b *Todo) TableName() string {
-	return &quot;todo&quot;
-}
-</code></pre><h2 id="setup-routes-and-list-of-apis">Setup routes and list of APIs</h2>
+<h2 id="setup-routes-and-list-of-apis">Setup routes and list of APIs</h2>
 <p>Here, we are going to set up a router using</p>
 <pre><code>r := gin.Default()
 </code></pre><p>Default returns a gin Engine instance with the Logger(write the logs to gin.DefaultWriter) and Recovery middleware already attached but if you need to start a blank gin instance with middleware attached, you should use gin.New()</p>
 <pre><code>v1 := r.Group(&quot;/v1&quot;)
 </code></pre><p>You can group multiple routes using Group() function, these APIs will be accessible on /v1</p>
-<pre><code>package Routes
+<script type="application/javascript" src="https://gist.github.com/ektagarg/eea34ca294af4c9d3a4005b7fd90e55d.js"></script>
 
-import (
-	&quot;../Controllers&quot;
-	&quot;github.com/gin-gonic/gin&quot;
-)
-
-func SetupRouter() *gin.Engine {
-	r := gin.Default()
-	v1 := r.Group(&quot;/v1&quot;)
-	{
-		v1.GET(&quot;todo&quot;, Controllers.GetTodos)
-		v1.POST(&quot;todo&quot;, Controllers.CreateATodo)
-		v1.GET(&quot;todo/:id&quot;, Controllers.GetATodo)
-		v1.PUT(&quot;todo/:id&quot;, Controllers.UpdateATodo)
-		v1.DELETE(&quot;todo/:id&quot;, Controllers.DeleteATodo)
-	}
-	return r
-}
-</code></pre><h2 id="models-database-queries">Models: Database queries</h2>
+<h2 id="models-database-queries">Models: Database queries</h2>
 <p>Let’s write all the Database queries which we will be required to create APIs which includes: fetching all the records from table todo, insert a record, fetch a specific record, update an existing record, delete a record.</p>
-<pre><code>package Models
+<script type="application/javascript" src="https://gist.github.com/ektagarg/8da3903a5422930b55d3f7384896fb30.js"></script>
 
-import (
-	&quot;../Config&quot;
-	&quot;fmt&quot;
-	_ &quot;github.com/go-sql-driver/mysql&quot;
-)
-
-//fetch all todos at once
-func GetAllTodos(todo *[]Todo) (err error) {
-	if err = Config.DB.Find(todo).Error; err != nil {
-		return err
-	}
-	return nil
-}
-
-//insert a todo
-func CreateATodo(todo *Todo) (err error) {
-	if err = Config.DB.Create(todo).Error; err != nil {
-		return err
-	}
-	return nil
-}
-
-//fetch one todo
-func GetATodo(todo *Todo, id string) (err error) {
-	if err := Config.DB.Where(&quot;id = ?&quot;, id).First(todo).Error; err != nil {
-		return err
-	}
-	return nil
-}
-
-//update a todo
-func UpdateATodo(todo *Todo, id string) (err error) {
-	fmt.Println(todo)
-	Config.DB.Save(todo)
-	return nil
-}
-
-//delete a todo
-func DeleteATodo(todo *Todo, id string) (err error) {
-	Config.DB.Where(&quot;id = ?&quot;, id).Delete(todo)
-	return nil
-}
-</code></pre><h2 id="create-an-api-post-todo">Create an API: POST Todo</h2>
+<h2 id="create-an-api-post-todo">Create an API: POST Todo</h2>
 <p>GIN provides methods(Must bind, Should bind) to bind request body into type which supports JSON, XML, YAML and form values.</p>
 <pre><code>c.BindJSON(&amp;todo)
 </code></pre><p>So here it will bind request body to <strong>Models.Todo</strong> (when binding from JSON, set json:&ldquo;fieldname&rdquo;) which is to:</p>
@@ -955,19 +845,9 @@ func DeleteATodo(todo *Todo, id string) (err error) {
 </code></pre><p>We can add validations to this struct as well, for eg: binding:”required” will return an error if it has empty value while binding.
 Make a DB call to create a todo which is being handled by CreateATodo() written in Models/Todo.go. If it returns an error, call <strong>AbortWithStatus</strong> which calls <code>Abort()</code> and writes the error code (We are using net/http package for <strong>StatusNotFound</strong> and StatusOK codes).</p>
 <p>POST API to create a TODO:</p>
-<pre><code>func CreateATodo(c *gin.Context) {
-	var todo Models.Todo
-	c.BindJSON(&amp;todo)
-	// DB call to create a todo
-	// Config.DB.Create(todo).Error;
-	err := Models.CreateATodo(&amp;todo)
-	if err != nil {
-		c.AbortWithStatus(http.StatusNotFound)
-	} else {
-		c.JSON(http.StatusOK, todo)
-	}
-}
-</code></pre><h2 id="run-the-server">RUN the server</h2>
+<script type="application/javascript" src="https://gist.github.com/ektagarg/84636e1253f5eb8d46ae1ba5ae80d447.js"></script>
+
+<h2 id="run-the-server">RUN the server</h2>
 <p>Let’s get ready to combine DB config, Models, Routes, APIs into main.go. <strong>gorm.Open()</strong> initialize a new DB connection:</p>
 <pre><code>db, err := gorm.Open(&quot;mysql&quot;, &quot;user:password@/dbname?charset=utf8&amp;parseTime=True&amp;loc=Local&quot;)
 </code></pre><p><strong>AutoMigrate()</strong> automatically migrates your schema, to keep your schema update to date.</p>
@@ -1054,7 +934,7 @@ func main() {
 
 &copy;
 	
-	2020 Blog by Ekta
+	2021 Blog by Ekta
 	
 </div>
             </div>

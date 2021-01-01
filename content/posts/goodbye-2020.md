@@ -1,13 +1,13 @@
 ---
 title: "Tech talks 2020"
 date: 2020-12-31T09:01:58+05:30
-description: "And 2020 came to end! It was both challenging and exciting for me. This year, I got the opportunity to give talks in Gophercon Eupore, Gophercon Turkey."
+description: "And 2020 came to end! It was both challenging and exciting for me. This year, I got the opportunity to give talks at Gophercon Eupore, Gophercon Turkey."
 tags: [Gophercon, Talks]
 featured_image: "/images/tech-talks-2020/eu-t.png"
 categories: Talks
 comment : true
 ---
-This year has been a roller coaster ride for me, and I guess, for most people. Things were so uncertain. Even during this time of uncertainty, some of the tech communities have gone completely online and done a tremendous job of organizing conferences. This blog is about all the talks in gave at various conferences this year and all of them are related to [Go](https://golang.org/).
+This year has been a roller coaster ride for me, and I guess, for most people. Things were so uncertain. Even during this time of uncertainty, some of the tech communities have gone completely online and done a tremendous job of organizing conferences. This blog is about all the talks I gave at various conferences this year and all of them are related to [Go](https://golang.org/).
 
 ## Go
 One of the great things which I feel [Go](https://golang.org/) offers is __clarity__ and __ease-of-use__. I have started working in Go around a year and a half back and I am still exploring a lot of its features. 
@@ -16,7 +16,7 @@ One of the great things which I feel [Go](https://golang.org/) offers is __clari
 ## Gophercon EU Lightning Talk
 After attending a handful of conferences earlier this year, I applied for a lightning talk at __Gophercon EU__. My talk proposal got accepted and it was both nervous and exciting at the same time, as this was going to be my first talk at any conference.
 
-![Gophercon talk](/images/tech-talks-2020/gophercontalk.jpeg)
+{{< tweet 1271769409992880136 >}}
 
 #### About the topic:
 
@@ -24,11 +24,11 @@ I have been exploring web assembly for quite some time. I created a simple proje
 
 And, It was time to review my own talk. There are so many things which I got to learn about presenting a talk, time management, live coding, demo, etc. 
 
-![Project structure for GIN-TODO-APP](/images/tech-talks-2020/gocon-twitter.png)
+{{< tweet 1296721449898704898 >}}
 
 Here, If want to check out the talk:
 
-[![Watch Gophercon EU talk](/images/tech-talks-2020/gophercon-video.png)](https://www.youtube.com/watch?v=9cSO2Mg0h1M&t=252s&ab_channel=GopherConEurope)
+{{< youtube 9cSO2Mg0h1M >}}
 
 I want to thank [Natalie](https://twitter.com/NataliePis), [Paula](https://twitter.com/pbabbicola) ,and the entire [Gophercon EU](https://twitter.com/gopherconeu) team for organizing, giving me an opportunity to talk, and they have been super supportive the whole time.
 
@@ -37,7 +37,8 @@ In Gophercon lightning talk, I couldn't present the whole topic and things I wan
 
 Here, If you want to check out the talk:
 
-[![Watch Gophercon Turkey talk](/images/tech-talks-2020/turkeyyoutube.png)](https://www.youtube.com/watch?v=UJb0EZclURA&t=39s&ab_channel=GoT%C3%BCrkiye)
+{{< youtube UJb0EZclURA >}}
+
 
 This time, I was able to cover the topic entirely in this talk, I did a little code walkthrough followed up with the demo.
 
@@ -56,7 +57,8 @@ These talks were very beginner centric talks.
 
 Here, If you want to check out the testing talk:
 
-[![Golang testing](/images/tech-talks-2020/testing-yt.png)](https://www.youtube.com/watch?v=l9mxb34YHNA&t=192s&ab_channel=WomenWhoGoDelhiChapter)
+{{< youtube l9mxb34YHNA >}}
+
 
 I would like to thank [Rashmi Nagpal](https://twitter.com/iamrashminagpal) for organizing these meetups and encouraging people in speaking and attending talks.
 
@@ -64,4 +66,4 @@ I would like to thank [Rashmi Nagpal](https://twitter.com/iamrashminagpal) for o
 
 Be part of tech communities, open-source, learn, explore as much as you can. If you are a newbie or an experienced in Go, I would encourage you to join this [slack channel](gophers.slack.com).
 
-Goodbye 2020! You've treated me well.
+Goodbye 2020! You've treated me fine.

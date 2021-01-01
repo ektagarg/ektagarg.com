@@ -2,9 +2,9 @@
 title: "Golang: A Todo App using GIN"
 date: 2020-12-30T02:01:58+05:30
 description: "Gin is a web framework written in Go(Golang). If you need performance and good productivity, use Gin, you’ll love it."
-tags: [Gin, Golang, REST]
+tags: [Gin, Go, REST]
 featured_image: "/images/gin/gin.png"
-categories: Golang
+categories: Go
 comment : false
 ---
 
@@ -50,65 +50,14 @@ Let’s start working, I would suggest you write each n every line of code by yo
 ## Setup Database
 GORM is an ORM library written in Golang which we are using in our project. In this config file, we will be creating a function called __BuildDBConfig()__ where you can set up your DB host, port, username, password, and dbname and pass it to __DbURL()__ to create your database URL.
 
-```
-package Config
-import (
-	"fmt"
-	"github.com/jinzhu/gorm"
-)
-
-var DB *gorm.DB
-
-// DBConfig represents db configuration
-type DBConfig struct {
-	Host     string
-	Port     int
-	User     string
-	DBName   string
-	Password string
-}
-
-func BuildDBConfig() *DBConfig {
-	dbConfig := DBConfig{
-		Host:     "0.0.0.0",
-		Port:     3306,
-		User:     "root",
-		DBName:   "todos",
-		Password: "mypassword",
-	}
-	return &dbConfig
-}
-
-func DbURL(dbConfig *DBConfig) string {
-	return fmt.Sprintf(
-		"%s:%s@tcp(%s:%d)/%s?charset=utf8&parseTime=True&loc=Local",
-		dbConfig.User,
-		dbConfig.Password,
-		dbConfig.Host,
-		dbConfig.Port,
-		dbConfig.DBName,
-	)
-}
-```
+{{< gist ektagarg 6b3caeaee1b7f0194ce8790c3d21c6b3>}}
 
 ## Table and Schema
 Let’s talk about DB Structure and schema. For this project, we’ll be having just one table ‘todo’. This table will have id, title, description as its attributes.
 
 TableName() function will be used wherever we need to access the table name.
 
-```
-package Models
-
-type Todo struct {
-	ID uint            `json:"id"`
-	Title string       `json:"title"`
-	Description string `json:"description"`
-}
-
-func (b *Todo) TableName() string {
-	return "todo"
-}
-```
+{{< gist ektagarg ea63891b05bad4134f98f375fffac830>}}
 
 ## Setup routes and list of APIs
 Here, we are going to set up a router using
@@ -125,76 +74,12 @@ v1 := r.Group("/v1")
 
 You can group multiple routes using Group() function, these APIs will be accessible on /v1
 
-```
-package Routes
-
-import (
-	"../Controllers"
-	"github.com/gin-gonic/gin"
-)
-
-func SetupRouter() *gin.Engine {
-	r := gin.Default()
-	v1 := r.Group("/v1")
-	{
-		v1.GET("todo", Controllers.GetTodos)
-		v1.POST("todo", Controllers.CreateATodo)
-		v1.GET("todo/:id", Controllers.GetATodo)
-		v1.PUT("todo/:id", Controllers.UpdateATodo)
-		v1.DELETE("todo/:id", Controllers.DeleteATodo)
-	}
-	return r
-}
-```
+{{< gist ektagarg eea34ca294af4c9d3a4005b7fd90e55d>}}
 
 ## Models: Database queries
 Let’s write all the Database queries which we will be required to create APIs which includes: fetching all the records from table todo, insert a record, fetch a specific record, update an existing record, delete a record.
-```
-package Models
 
-import (
-	"../Config"
-	"fmt"
-	_ "github.com/go-sql-driver/mysql"
-)
-
-//fetch all todos at once
-func GetAllTodos(todo *[]Todo) (err error) {
-	if err = Config.DB.Find(todo).Error; err != nil {
-		return err
-	}
-	return nil
-}
-
-//insert a todo
-func CreateATodo(todo *Todo) (err error) {
-	if err = Config.DB.Create(todo).Error; err != nil {
-		return err
-	}
-	return nil
-}
-
-//fetch one todo
-func GetATodo(todo *Todo, id string) (err error) {
-	if err := Config.DB.Where("id = ?", id).First(todo).Error; err != nil {
-		return err
-	}
-	return nil
-}
-
-//update a todo
-func UpdateATodo(todo *Todo, id string) (err error) {
-	fmt.Println(todo)
-	Config.DB.Save(todo)
-	return nil
-}
-
-//delete a todo
-func DeleteATodo(todo *Todo, id string) (err error) {
-	Config.DB.Where("id = ?", id).Delete(todo)
-	return nil
-}
-```
+{{< gist ektagarg 8da3903a5422930b55d3f7384896fb30>}}
 
 ## Create an API: POST Todo
 GIN provides methods(Must bind, Should bind) to bind request body into type which supports JSON, XML, YAML and form values.
@@ -218,20 +103,7 @@ Make a DB call to create a todo which is being handled by CreateATodo() written 
 
 POST API to create a TODO:
 
-```
-func CreateATodo(c *gin.Context) {
-	var todo Models.Todo
-	c.BindJSON(&todo)
-	// DB call to create a todo
-	// Config.DB.Create(todo).Error;
-	err := Models.CreateATodo(&todo)
-	if err != nil {
-		c.AbortWithStatus(http.StatusNotFound)
-	} else {
-		c.JSON(http.StatusOK, todo)
-	}
-}
-```
+{{< gist ektagarg 84636e1253f5eb8d46ae1ba5ae80d447>}}
 
 ## RUN the server
 Let’s get ready to combine DB config, Models, Routes, APIs into main.go. __gorm.Open()__ initialize a new DB connection:
