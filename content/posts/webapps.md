@@ -1,6 +1,7 @@
 ---
 title: "How web applications work?"
 description: "A little digging into the history of web applications."
+tags: [Web]
 date: 2020-12-30T16:08:56+05:30
 author: "Ekta Garg"
 ---
