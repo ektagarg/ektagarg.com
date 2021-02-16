@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>Categories</title>
+<title>Profiling and optimizing GO [PART-1]</title>
 
 
 
@@ -10,25 +10,26 @@
 <meta name="google-site-verification" content="">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 <meta content="telephone=no" name="format-detection">
-<meta name="description" content="">
+<meta name="description" content="Let&#39;s create a slack bot to get daily stats for your website.">
 <meta name="renderer" content="webkit">
 <meta name="theme-color" content="#ffffff">
 
 
 
-<meta property="og:title" content="Categories" />
-<meta property="og:description" content="My HomePage Description" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://blog.ektagarg.com/categories/" />
-<meta property="og:updated_time" content="2021-02-16T02:01:58+05:30" /><meta property="og:site_name" content="My Blog" />
+<meta property="og:title" content="Profiling and optimizing GO [PART-1]" />
+<meta property="og:description" content="Let&#39;s create a slack bot to get daily stats for your website." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.ektagarg.com/posts/profiling-and-optimizing-go/" />
+<meta property="article:published_time" content="2021-01-03T11:58:58+05:30" />
+<meta property="article:modified_time" content="2021-01-03T11:58:58+05:30" /><meta property="og:site_name" content="My Blog" />
 
 
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Categories"/>
-<meta name="twitter:description" content="My HomePage Description"/>
+<meta name="twitter:title" content="Profiling and optimizing GO [PART-1]"/>
+<meta name="twitter:description" content="Let&#39;s create a slack bot to get daily stats for your website."/>
 
 
 
@@ -67,7 +68,29 @@
 
 
 
+  
+    <script src="https://blog.ektagarg.com/js/toc-collapse.js"></script>
+  
 
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/vendor/js/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+  clientID: 'your client id',
+  clientSecret: 'your client secret',
+  repo: 'repo name',
+  owner: 'user',
+  admin: ['user'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
 
 
 
@@ -101,9 +124,11 @@
             
             
             
+                
             
             
-            <a class="a-block nav-link-item false" href="/posts">
+            
+            <a class="a-block nav-link-item active" href="/posts">
                 Archive
             </a>
             
@@ -111,11 +136,9 @@
             
             
             
-                
             
             
-            
-            <a class="a-block nav-link-item active" href="/categories">
+            <a class="a-block nav-link-item false" href="/categories">
                 Categories
             </a>
             
@@ -149,6 +172,70 @@
 </div><div ref="extraContainer" class="extra-container">
     
     
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>-  -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#profiling" onclick="onNavClick(`#profiling-nav`)" id="profiling-nav">
+									Profiling
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#profiling-in-go" onclick="onNavClick(`#profiling-in-go-nav`)" id="profiling-in-go-nav">
+									Profiling in Go
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
     <div class="pagination">
         <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
             <i class="material-icons pagination-action-icon">
@@ -166,8 +253,6 @@
         </a>
         
         
-        
-        
     </div>
 </div>
 <div class="single-column-drawer-container" ref="drawer"
@@ -180,9 +265,11 @@
                 
                 
                 
+                    
                 
                 
-                <a class="a-block drawer-menu-item false" href="/posts">
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
                     Archive
                 </a>
                 
@@ -190,11 +277,9 @@
                 
                 
                 
-                    
                 
                 
-                
-                <a class="a-block drawer-menu-item active" href="/categories">
+                <a class="a-block drawer-menu-item false" href="/categories">
                     Categories
                 </a>
                 
@@ -209,6 +294,70 @@
                 </a>
                 
             
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>-  -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#profiling" onclick="onNavClick(`#profiling-nav`)" id="profiling-nav">
+									Profiling
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#profiling-in-go" onclick="onNavClick(`#profiling-in-go-nav`)" id="profiling-in-go-nav">
+									Profiling in Go
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
             
         </div>
     </div>
@@ -254,75 +403,129 @@
             <div id="content">
 <div ref="streamContainer" class="stream-container">
     <div class="post-list-container post-list-container-shadow">
-        <a class="a-block">
-            <div class="post-item-wrapper post-item-wrapper-no-hover">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title post-item-title-small">
-                            Categories
-                        </div>
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Profiling and optimizing GO [PART-1]
+                    
+                    <div class="post-subtitle">
+                        Let&#39;s create a slack bot to get daily stats for your website.
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/go">Go</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/go">Go</a>
+                                &nbsp;
+                            
+                                <a href="/tags/profiling">Profiling</a>
+                                &nbsp;
+                            
+                                <a href="/tags/optimization">Optimization</a>
+                                &nbsp;
+                            
+                        
+                        
                     </div>
                 </div>
             </div>
-        </a>
-        
-        
-                <a href="https://blog.ektagarg.com/categories/networking/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    Networking
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h3 id="profiling">Profiling</h3>
+<p>A dynamic program analysis that measures space, time complexity, frequency and duration of function calls, usage of instructions.</p>
+<p>Profiling is achieved by instrumenting either the program source code or its binary executable form using a tool called a profiler (or code profiler). Profilers may use a number of different techniques, such as event-based, statistical, instrumented, and simulation methods.</p>
+<h2 id="profiling-in-go">Profiling in Go</h2>
+<p>One of the great things about Go is that it has really rich profiling tools included.</p>
+<ul>
+<li>CPU profiling (stack sampling) : CPU profiling uses stack sampling which basically means that every so often it will look at what&rsquo;s running in the CPU and record the full call stack.</li>
+<li>Heap profiling : It means that small percenatge of all of your allocation are profiled and tells exactly what happened on a call stack at that point.</li>
+<li>Block profiling</li>
+<li>Tracing</li>
+</ul>
+<p>All of this is built into <a href="https://golang.org/pkg/net/http/pprof/">pprof</a> and <a href="https://golang.org/pkg/runtime/">runtime</a> packages.</p>
+<p>Requirements:
+For profiling, first you need to create a profile. What that means is that you need to record what&rsquo;s happening and record a binary file and there&rsquo;s a few ways you can do that:</p>
+<ol>
+<li>
+<p>Tests and benchmarks: When running go tests, you can pass -cpuprofile,  -memprofile flags and that generates a profile.</p>
+</li>
+<li>
+<p>Import <a href="https://golang.org/pkg/net/http/pprof/">pprof</a> package: Importing a blank pprof package will add a few endpoints in your service. Once you have it installed you can directly run:
+go tool pprof -seconds 5 http://localhost:8080/debug/pprof/profile</p>
+</li>
+<li>
+<p>Another option, which is rarely used is start the profile from your code by calling runtime.StartCPUProfile and runtime.WriteHeapProfile.</p>
+</li>
+</ol>
+<p>Once you have created those profiles, you can analyze them using <code>go tool pprof</code></p>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;"></p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://blog.ektagarg.com/posts/http2/">
+			<br>HTTP2
                 </a>
-        
-                <a href="https://blog.ektagarg.com/categories/go/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    Go
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                
+                
+                
+                <a class="older-posts" href="https://blog.ektagarg.com/posts/slack-bot-using-zapier/">
+			<br>Slack bot using [Zapier &#43; Redash &#43; Google sheets &#43; Slack]
                 </a>
-        
-                <a href="https://blog.ektagarg.com/categories/automation/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    Automation
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-                <a href="https://blog.ektagarg.com/categories/talks/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    Talks
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-    </div>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+<div class="comments">
+    <vue-disqus shortname="ektagarg"></vue-disqus>
 </div>
+<noscript><noscript></noscript></noscript>
+<a href="https://disqus.com/" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+<div id="gitalk-container"></div>
+
+
+
+
 
 
             </div>
+        </div>
+    </div>
+</div>
 
-
-<div id="single-column-footer">
+            </div><div id="single-column-footer">
  Built with <a href="https://gohugo.io/">Hugo</a>
 <br>
 

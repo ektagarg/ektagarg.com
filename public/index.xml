@@ -5,9 +5,74 @@
     <description>Recent content on Blog by Ekta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Jan 2021 09:01:58 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 16 Feb 2021 02:01:58 +0530</lastBuildDate>
     
         <atom:link href="https://blog.ektagarg.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>CDN: Content Delivery Network</title>
+        <link>https://blog.ektagarg.com/posts/cdn/</link>
+        <pubDate>Tue, 16 Feb 2021 02:01:58 +0530</pubDate>
+        
+        <guid>https://blog.ektagarg.com/posts/cdn/</guid>
+        <description>Blog by Ekta https://blog.ektagarg.com/posts/cdn/ -&lt;p&gt;What is the challenge that CDN addresses?
+For eg: we have a software which has users from all around the world, but we don&amp;rsquo;t have servers all around the world and the experience that those users have due to that dynamic.&lt;/p&gt;
+&lt;p&gt;What is a CDN?
+It is a service that accelerates internet content delivery to make your website faster.&lt;/p&gt;
+- https://blog.ektagarg.com/posts/cdn/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>HTTP2</title>
+        <link>https://blog.ektagarg.com/posts/http2/</link>
+        <pubDate>Tue, 16 Feb 2021 02:01:58 +0530</pubDate>
+        
+        <guid>https://blog.ektagarg.com/posts/http2/</guid>
+        <description>Blog by Ekta https://blog.ektagarg.com/posts/http2/ -&lt;p&gt;How HTTP2.0 works?&lt;/p&gt;
+- https://blog.ektagarg.com/posts/http2/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Profiling and optimizing GO [PART-1]</title>
+        <link>https://blog.ektagarg.com/posts/profiling-and-optimizing-go/</link>
+        <pubDate>Sun, 03 Jan 2021 11:58:58 +0530</pubDate>
+        
+        <guid>https://blog.ektagarg.com/posts/profiling-and-optimizing-go/</guid>
+        <description>Blog by Ekta https://blog.ektagarg.com/posts/profiling-and-optimizing-go/ -&lt;h3 id=&#34;profiling&#34;&gt;Profiling&lt;/h3&gt;
+&lt;p&gt;A dynamic program analysis that measures space, time complexity, frequency and duration of function calls, usage of instructions.&lt;/p&gt;
+&lt;p&gt;Profiling is achieved by instrumenting either the program source code or its binary executable form using a tool called a profiler (or code profiler). Profilers may use a number of different techniques, such as event-based, statistical, instrumented, and simulation methods.&lt;/p&gt;
+&lt;h2 id=&#34;profiling-in-go&#34;&gt;Profiling in Go&lt;/h2&gt;
+&lt;p&gt;One of the great things about Go is that it has really rich profiling tools included.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CPU profiling (stack sampling) : CPU profiling uses stack sampling which basically means that every so often it will look at what&amp;rsquo;s running in the CPU and record the full call stack.&lt;/li&gt;
+&lt;li&gt;Heap profiling : It means that small percenatge of all of your allocation are profiled and tells exactly what happened on a call stack at that point.&lt;/li&gt;
+&lt;li&gt;Block profiling&lt;/li&gt;
+&lt;li&gt;Tracing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All of this is built into &lt;a href=&#34;https://golang.org/pkg/net/http/pprof/&#34;&gt;pprof&lt;/a&gt; and &lt;a href=&#34;https://golang.org/pkg/runtime/&#34;&gt;runtime&lt;/a&gt; packages.&lt;/p&gt;
+&lt;p&gt;Requirements:
+For profiling, first you need to create a profile. What that means is that you need to record what&amp;rsquo;s happening and record a binary file and there&amp;rsquo;s a few ways you can do that:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Tests and benchmarks: When running go tests, you can pass -cpuprofile,  -memprofile flags and that generates a profile.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Import &lt;a href=&#34;https://golang.org/pkg/net/http/pprof/&#34;&gt;pprof&lt;/a&gt; package: Importing a blank pprof package will add a few endpoints in your service. Once you have it installed you can directly run:
+go tool pprof -seconds 5 http://localhost:8080/debug/pprof/profile&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Another option, which is rarely used is start the profile from your code by calling runtime.StartCPUProfile and runtime.WriteHeapProfile.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Once you have created those profiles, you can analyze them using &lt;code&gt;go tool pprof&lt;/code&gt;&lt;/p&gt;
+- https://blog.ektagarg.com/posts/profiling-and-optimizing-go/ - </description>
+        </item>
     
     
     

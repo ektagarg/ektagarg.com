@@ -6,10 +6,40 @@
     <description>Recent content in Posts on Blog by Ekta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Jan 2021 09:01:58 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 16 Feb 2021 02:01:58 +0530</lastBuildDate>
     
 	<atom:link href="https://blog.ektagarg.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CDN: Content Delivery Network</title>
+      <link>https://blog.ektagarg.com/posts/cdn/</link>
+      <pubDate>Tue, 16 Feb 2021 02:01:58 +0530</pubDate>
+      
+      <guid>https://blog.ektagarg.com/posts/cdn/</guid>
+      <description>What is the challenge that CDN addresses? For eg: we have a software which has users from all around the world, but we don&amp;rsquo;t have servers all around the world and the experience that those users have due to that dynamic.
+What is a CDN? It is a service that accelerates internet content delivery to make your website faster.</description>
+    </item>
+    
+    <item>
+      <title>HTTP2</title>
+      <link>https://blog.ektagarg.com/posts/http2/</link>
+      <pubDate>Tue, 16 Feb 2021 02:01:58 +0530</pubDate>
+      
+      <guid>https://blog.ektagarg.com/posts/http2/</guid>
+      <description>How HTTP2.0 works?</description>
+    </item>
+    
+    <item>
+      <title>Profiling and optimizing GO [PART-1]</title>
+      <link>https://blog.ektagarg.com/posts/profiling-and-optimizing-go/</link>
+      <pubDate>Sun, 03 Jan 2021 11:58:58 +0530</pubDate>
+      
+      <guid>https://blog.ektagarg.com/posts/profiling-and-optimizing-go/</guid>
+      <description>Profiling A dynamic program analysis that measures space, time complexity, frequency and duration of function calls, usage of instructions.
+Profiling is achieved by instrumenting either the program source code or its binary executable form using a tool called a profiler (or code profiler). Profilers may use a number of different techniques, such as event-based, statistical, instrumented, and simulation methods.
+Profiling in Go One of the great things about Go is that it has really rich profiling tools included.</description>
+    </item>
     
     <item>
       <title>Slack bot using [Zapier &#43; Redash &#43; Google sheets &#43; Slack]</title>
