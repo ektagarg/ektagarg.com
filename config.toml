@@ -37,7 +37,6 @@ description = "My HomePage Description"  # will set 'og:description'
 [taxonomies]
    tag = "tags"
    category = "categories"
-    about = "about"
 
 [[menu.main]]
 url = "/categories"
