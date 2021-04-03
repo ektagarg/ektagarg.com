@@ -447,6 +447,12 @@ a {
       margin-top: 8px;
       font-size: $nav-subtitle-size;
     }
+    .nav-image{
+      width: 60px;
+      border-radius: 50px;
+      margin-right: 6px;
+      height: 60px;
+    }
     &:hover {
       border-right: 2px solid
         rgba($color-accent, $nav-item-hover-indicator-alpha);
