@@ -5,7 +5,9 @@ description= "Welcome to my blog!"
 comment = false
 +++
 
-I am a Software Development Engineer currently working at Grofers, India. I love solving problems, curious about "how" [in science, space, and technology], writing about my technical findings, giving tech talks.
+I am a Software Development Engineer currently working at Grofers, India. 
+
+I love solving problems, curious about "how" [in science, space, and technology], writing about my technical findings, giving tech talks.
 
 I have started this blog on 31st Dec 2020 with the aim to keep posting about interesting problems I solve, tech topics I read about, TIL, etc. I will try my best to keep my contributions.
 
