@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TIL on Blog by Ekta</title>
+    <link>https://blog.ektagarg.com/tags/til/</link>
+    <description>Recent content in TIL on Blog by Ekta</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 03 Apr 2021 02:01:58 +0530</lastBuildDate>
+    
+	<atom:link href="https://blog.ektagarg.com/tags/til/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CDN: Content Delivery Network</title>
+      <link>https://blog.ektagarg.com/posts/cdn/</link>
+      <pubDate>Sat, 03 Apr 2021 02:01:58 +0530</pubDate>
+      
+      <guid>https://blog.ektagarg.com/posts/cdn/</guid>
+      <description>What is a CDN? It is a service that accelerates internet content delivery to make your website faster.
+What is the challenge that CDN addresses? For eg: we have software that has users from all around the world, but we don&amp;rsquo;t have servers all around the world and the experience that those users have due to that dynamic.
+Let&amp;rsquo;s understand the problem with an example:
+I have a simple diagram showing I have a server hosted in Singapore and I have users all around the world.</description>
+    </item>
+    
+  </channel>
+</rss>

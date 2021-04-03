@@ -6,21 +6,10 @@
     <description>Recent content in Go on Blog by Ekta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 Jan 2021 11:58:58 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 30 Dec 2020 02:01:58 +0530</lastBuildDate>
     
 	<atom:link href="https://blog.ektagarg.com/categories/go/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Profiling and optimizing GO [PART-1]</title>
-      <link>https://blog.ektagarg.com/posts/profiling-and-optimizing-go/</link>
-      <pubDate>Sun, 03 Jan 2021 11:58:58 +0530</pubDate>
-      
-      <guid>https://blog.ektagarg.com/posts/profiling-and-optimizing-go/</guid>
-      <description>Profiling A dynamic program analysis that measures space, time complexity, frequency and duration of function calls, usage of instructions.
-Profiling is achieved by instrumenting either the program source code or its binary executable form using a tool called a profiler (or code profiler). Profilers may use a number of different techniques, such as event-based, statistical, instrumented, and simulation methods.
-Profiling in Go One of the great things about Go is that it has really rich profiling tools included.</description>
-    </item>
     
     <item>
       <title>Golang: A Todo App using GIN</title>

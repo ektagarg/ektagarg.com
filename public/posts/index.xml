@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Blog by Ekta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Feb 2021 02:01:58 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 03 Apr 2021 02:01:58 +0530</lastBuildDate>
     
 	<atom:link href="https://blog.ektagarg.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,31 +14,24 @@
     <item>
       <title>CDN: Content Delivery Network</title>
       <link>https://blog.ektagarg.com/posts/cdn/</link>
-      <pubDate>Tue, 16 Feb 2021 02:01:58 +0530</pubDate>
+      <pubDate>Sat, 03 Apr 2021 02:01:58 +0530</pubDate>
       
       <guid>https://blog.ektagarg.com/posts/cdn/</guid>
-      <description>What is the challenge that CDN addresses? For eg: we have a software which has users from all around the world, but we don&amp;rsquo;t have servers all around the world and the experience that those users have due to that dynamic.
-What is a CDN? It is a service that accelerates internet content delivery to make your website faster.</description>
+      <description>What is a CDN? It is a service that accelerates internet content delivery to make your website faster.
+What is the challenge that CDN addresses? For eg: we have software that has users from all around the world, but we don&amp;rsquo;t have servers all around the world and the experience that those users have due to that dynamic.
+Let&amp;rsquo;s understand the problem with an example:
+I have a simple diagram showing I have a server hosted in Singapore and I have users all around the world.</description>
     </item>
     
     <item>
-      <title>HTTP2</title>
-      <link>https://blog.ektagarg.com/posts/http2/</link>
+      <title>Improve your web performance by switching from HTTP 1.1 to HTTP 2.0</title>
+      <link>https://blog.ektagarg.com/posts/performance-improvement-with-http2/</link>
       <pubDate>Tue, 16 Feb 2021 02:01:58 +0530</pubDate>
       
-      <guid>https://blog.ektagarg.com/posts/http2/</guid>
-      <description>How HTTP2.0 works?</description>
-    </item>
-    
-    <item>
-      <title>Profiling and optimizing GO [PART-1]</title>
-      <link>https://blog.ektagarg.com/posts/profiling-and-optimizing-go/</link>
-      <pubDate>Sun, 03 Jan 2021 11:58:58 +0530</pubDate>
-      
-      <guid>https://blog.ektagarg.com/posts/profiling-and-optimizing-go/</guid>
-      <description>Profiling A dynamic program analysis that measures space, time complexity, frequency and duration of function calls, usage of instructions.
-Profiling is achieved by instrumenting either the program source code or its binary executable form using a tool called a profiler (or code profiler). Profilers may use a number of different techniques, such as event-based, statistical, instrumented, and simulation methods.
-Profiling in Go One of the great things about Go is that it has really rich profiling tools included.</description>
+      <guid>https://blog.ektagarg.com/posts/performance-improvement-with-http2/</guid>
+      <description>HTTP 2.0 is the improvement in HTTP 1.0 which was introduced late in 2015. To understand HTTP 2.0 better, let&amp;rsquo;s first deep dive into the history of HTTP.
+History of HTTP HTTP 0.9 HTTP 0.9 was introduced in 1991. At that time most of the websites were having basic text-based content hyperlinked to each other. It was working as its name suggests - Hyper Text Transfer Protocol.
+ Basic Operations GET, POST, HEAD were supported.</description>
     </item>
     
     <item>

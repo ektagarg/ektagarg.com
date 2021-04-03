@@ -5,7 +5,7 @@
     <description>Recent content on Blog by Ekta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Feb 2021 02:01:58 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 12 Dec 2020 02:01:58 +0530</lastBuildDate>
     
         <atom:link href="https://blog.ektagarg.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,64 +14,119 @@
         <item>
         <title>CDN: Content Delivery Network</title>
         <link>https://blog.ektagarg.com/posts/cdn/</link>
-        <pubDate>Tue, 16 Feb 2021 02:01:58 +0530</pubDate>
+        <pubDate>Sat, 03 Apr 2021 02:01:58 +0530</pubDate>
         
         <guid>https://blog.ektagarg.com/posts/cdn/</guid>
-        <description>Blog by Ekta https://blog.ektagarg.com/posts/cdn/ -&lt;p&gt;What is the challenge that CDN addresses?
-For eg: we have a software which has users from all around the world, but we don&amp;rsquo;t have servers all around the world and the experience that those users have due to that dynamic.&lt;/p&gt;
-&lt;p&gt;What is a CDN?
-It is a service that accelerates internet content delivery to make your website faster.&lt;/p&gt;
+        <description>Blog by Ekta https://blog.ektagarg.com/posts/cdn/ -&lt;h2 id=&#34;what-is-a-cdn&#34;&gt;What is a CDN?&lt;/h2&gt;
+&lt;p&gt;It is a service that accelerates internet content delivery to make your website faster.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-the-challenge-that-cdn-addresses&#34;&gt;What is the challenge that CDN addresses?&lt;/h2&gt;
+&lt;p&gt;For eg: we have software that has users from all around the world, but we don&amp;rsquo;t have servers all around the world and the experience that those users have due to that dynamic.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Let&amp;rsquo;s understand the problem with an example:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.ektagarg.com/images/cdn/cdn.jpg&#34; alt=&#34;Users located worldwide&#34;&gt;&lt;/p&gt;
+&lt;p&gt;I have a simple diagram showing I have a server hosted in Singapore and I have users all around the world. In total, I have got 50 users who are accessing my website [10 in New York, 5 in London, 10 in Singapore, 15 in Delhi, 10 in Hong Kong]&lt;/p&gt;
+&lt;p&gt;Users in London make a request to the server, they are 67 hundred miles from the server in Singapore so they make calls from up and down from this far. And the amount of time it takes is measured in milliseconds and just that round trip would be about 140 ms, for our users in New York, that would be about 230 ms and it would take lesser time in Delhi and Singapore as it is closer in proximity. So, this means the further the users are away, the longer it takes and ultimately the slower the website would be for the users.&lt;/p&gt;
+&lt;p&gt;This is the problem that CDN solves by &lt;strong&gt;reducing the amount of distance between the resources a website needs&lt;/strong&gt; in order to serve its users. So what is CDN exactly doing here?&lt;/p&gt;
+&lt;p&gt;It places CDN around the world in as many locations as possible.&lt;/p&gt;
+&lt;p&gt;In our above example, let&amp;rsquo;s assume we have placed CDN in every location the users are trying to access our content from so it&amp;rsquo;s in New York, Delhi, Singapore, Hong Kong, London.&lt;/p&gt;
+&lt;p&gt;So now when a user from London tries to access the website, it&amp;rsquo;s first retrieved by the content delivery network service and then distributed around the world. So we have a single request down to the Singapore server. It&amp;rsquo;s now distributed around the world and our users now instead of going all the way to Singapore can retrieve content directly from their closest geographical location, drastically reducing the amount of time it takes to retrieve the content.&lt;/p&gt;
+&lt;p&gt;Benefits:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Increased response time for users located worldwide.&lt;/li&gt;
+&lt;li&gt;Reduction in load on just one server or we can say that load is getting distributed.&lt;/li&gt;
+&lt;li&gt;Reduction in the amount of capacity required on a single server in low.&lt;/li&gt;
+&lt;li&gt;Increase in the uptime in server as the users are now making calls in a distributed manner.&lt;/li&gt;
+&lt;li&gt;Increase in security through obscurity.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Thanks for reading. Stay tuned!&lt;/p&gt;
 - https://blog.ektagarg.com/posts/cdn/ - </description>
         </item>
     
     
     
         <item>
-        <title>HTTP2</title>
-        <link>https://blog.ektagarg.com/posts/http2/</link>
+        <title>Improve your web performance by switching from HTTP 1.1 to HTTP 2.0</title>
+        <link>https://blog.ektagarg.com/posts/performance-improvement-with-http2/</link>
         <pubDate>Tue, 16 Feb 2021 02:01:58 +0530</pubDate>
         
-        <guid>https://blog.ektagarg.com/posts/http2/</guid>
-        <description>Blog by Ekta https://blog.ektagarg.com/posts/http2/ -&lt;p&gt;How HTTP2.0 works?&lt;/p&gt;
-- https://blog.ektagarg.com/posts/http2/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Profiling and optimizing GO [PART-1]</title>
-        <link>https://blog.ektagarg.com/posts/profiling-and-optimizing-go/</link>
-        <pubDate>Sun, 03 Jan 2021 11:58:58 +0530</pubDate>
-        
-        <guid>https://blog.ektagarg.com/posts/profiling-and-optimizing-go/</guid>
-        <description>Blog by Ekta https://blog.ektagarg.com/posts/profiling-and-optimizing-go/ -&lt;h3 id=&#34;profiling&#34;&gt;Profiling&lt;/h3&gt;
-&lt;p&gt;A dynamic program analysis that measures space, time complexity, frequency and duration of function calls, usage of instructions.&lt;/p&gt;
-&lt;p&gt;Profiling is achieved by instrumenting either the program source code or its binary executable form using a tool called a profiler (or code profiler). Profilers may use a number of different techniques, such as event-based, statistical, instrumented, and simulation methods.&lt;/p&gt;
-&lt;h2 id=&#34;profiling-in-go&#34;&gt;Profiling in Go&lt;/h2&gt;
-&lt;p&gt;One of the great things about Go is that it has really rich profiling tools included.&lt;/p&gt;
+        <guid>https://blog.ektagarg.com/posts/performance-improvement-with-http2/</guid>
+        <description>Blog by Ekta https://blog.ektagarg.com/posts/performance-improvement-with-http2/ -&lt;p&gt;HTTP 2.0 is the improvement in HTTP 1.0 which was introduced late in 2015. To understand HTTP 2.0 better, let&amp;rsquo;s first deep dive into the history of HTTP.&lt;/p&gt;
+&lt;h2 id=&#34;history-of-http&#34;&gt;History of HTTP&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.ektagarg.com/images/http2/HTTP2.png&#34; alt=&#34;History of HTTP&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;http-09&#34;&gt;HTTP 0.9&lt;/h3&gt;
+&lt;p&gt;HTTP 0.9 was introduced in 1991. At that time most of the websites were having basic text-based content hyperlinked to each other. It was working as its name suggests - Hyper Text Transfer Protocol.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;CPU profiling (stack sampling) : CPU profiling uses stack sampling which basically means that every so often it will look at what&amp;rsquo;s running in the CPU and record the full call stack.&lt;/li&gt;
-&lt;li&gt;Heap profiling : It means that small percenatge of all of your allocation are profiled and tells exactly what happened on a call stack at that point.&lt;/li&gt;
-&lt;li&gt;Block profiling&lt;/li&gt;
-&lt;li&gt;Tracing&lt;/li&gt;
+&lt;li&gt;Basic Operations GET, POST, HEAD were supported.&lt;/li&gt;
+&lt;li&gt;Its purpose was to serve basic websites hyperlinked with each other.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;All of this is built into &lt;a href=&#34;https://golang.org/pkg/net/http/pprof/&#34;&gt;pprof&lt;/a&gt; and &lt;a href=&#34;https://golang.org/pkg/runtime/&#34;&gt;runtime&lt;/a&gt; packages.&lt;/p&gt;
-&lt;p&gt;Requirements:
-For profiling, first you need to create a profile. What that means is that you need to record what&amp;rsquo;s happening and record a binary file and there&amp;rsquo;s a few ways you can do that:&lt;/p&gt;
+&lt;h3 id=&#34;http-10&#34;&gt;HTTP 1.0&lt;/h3&gt;
+&lt;p&gt;After 5 years, HTTP 1.0 was introduced with a few other basic operations like PUT, DELETE, LINK, and UNLINK methods.&lt;/p&gt;
+&lt;h3 id=&#34;http-11&#34;&gt;HTTP 1.1&lt;/h3&gt;
+&lt;p&gt;Immediately after 1 year, in 1997, HTTP 1.1 was introduced. This is the current HTTP protocol which we are still using.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTP 1.1 was introduced with few changes because that was the internet revolution phase, the internet ecosystem was rapidly growing. Websites like an email client, search engines, social media giants were getting created with heavily loaded dynamic content. Most platforms had high usage of images, interactive content, more features that required high resource usage.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A lot of things were introduced to make the internet fast and allowing users to access the server faster.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Support of OPTIONS&lt;/li&gt;
+&lt;li&gt;CORS, Keep-alive was part of this version of HTTP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;but-what-was-not-right-with-http-11&#34;&gt;But what was not right with HTTP 1.1?&lt;/h2&gt;
+&lt;p&gt;In HTTP 1.1 for achieving speed on the website, if you are already a web developer you must be knowing these, that we are advised to do compression, caching, minifying CSS/JS, image sprites for icons, and another resource because the TCP connection used between the client and server are limited.&lt;/p&gt;
+&lt;h4 id=&#34;1-hol--head-of-line&#34;&gt;1. HOL- Head of Line&lt;/h4&gt;
+&lt;p&gt;Whenever a client requests a URL, an HTTP request is sent via a TCP connection, which is created between the client and the server. Initially, there was only a single TCP connection.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s understand this with an example:&lt;/p&gt;
+&lt;p&gt;If a user requests for say, home.html, which we know for sure that internally requires a CSS and a JS file. So the first request will be created for the home.html file, as there is a single TCP connection, it will wait for the response of that home.html i.e. TCP connection stays blocked until it receives a response. and after it receives home.html, the next request will be sent for CSS file and then next would be for JS file in a similar manner.&lt;/p&gt;
+&lt;p&gt;Later on, this was increased to 6 parallel TCP connections, but these days websites are at a much larger scale and even 6 TCP connections are not enough.&lt;/p&gt;
+&lt;h4 id=&#34;2-repetition-of-header-data&#34;&gt;2. Repetition of Header Data&lt;/h4&gt;
+&lt;p&gt;HTTP is a stateless connection, which means every request is independent of the previous and the next request, so each request has to contain request header data.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Request Header:
+user-agent:xxx
+cookie:xxx
+cache-control:xxx
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The same header is packed with all the requests and responses and it is useless sometimes when it is precisely same in all the requests. Header data can not be compressed, while you can compress the body of the request.&lt;/p&gt;
+&lt;h1 id=&#34;how-come-http-20-going-to-solve-all-the-problems&#34;&gt;How come HTTP 2.0 going to solve all the problems?&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.ektagarg.com/images/http2/http-2-file.png&#34; alt=&#34;HTTP 2.0&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;http-20&#34;&gt;HTTP 2.0&lt;/h3&gt;
 &lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Single Secured TCP Connection&lt;/strong&gt;: This is the solution to problem 1: HOL- Head of Line&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Tests and benchmarks: When running go tests, you can pass -cpuprofile,  -memprofile flags and that generates a profile.&lt;/p&gt;
+&lt;p&gt;In HTTP 2.0, a single secured TCP connection has been used, in which streams are created.
+Each HTTP request will be sent into streams over a single secured TCP connection.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Import &lt;a href=&#34;https://golang.org/pkg/net/http/pprof/&#34;&gt;pprof&lt;/a&gt; package: Importing a blank pprof package will add a few endpoints in your service. Once you have it installed you can directly run:
-go tool pprof -seconds 5 http://localhost:8080/debug/pprof/profile&lt;/p&gt;
+&lt;p&gt;It is faster, as you are not setting up multiple TCP connections here, and the client is managing the streams which are multiplexing of streams into a single TCP connection.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;NOTE: It is mandatory to have HTTPS setup for HTTP2&lt;/strong&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;strong&gt;HPACK&lt;/strong&gt;: This is the solution to problem 2: Repetition of Header Data&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Header data is separated from basic request data. It allows compression of header data.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Another option, which is rarely used is start the profile from your code by calling runtime.StartCPUProfile and runtime.WriteHeapProfile.&lt;/p&gt;
+&lt;p&gt;If the preceding request had some header data, HPACK automatically enables the caching of that header data. Each request will not contain the same header data repeatedly which will make request data and delivery of data much faster on websites.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;strong&gt;PUSH&lt;/strong&gt;: PUSH frames enable us to send mandatory resources along with the HTTP response. They should be used with care as they can increase the size of the HTTP response.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For eg: You request a home.html page from a website and you know that to show this page on the browser, you must need a CSS and a JS file.
+You can make your request in such a way that server will send home.html along with the required CSS and JS file.&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Along with all this, we can keep on using gzip, browser caching, minifying CSS/JS to further improve the performance.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Almost all of the modern browsers support HTTP 2.0&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Once you have created those profiles, you can analyze them using &lt;code&gt;go tool pprof&lt;/code&gt;&lt;/p&gt;
-- https://blog.ektagarg.com/posts/profiling-and-optimizing-go/ - </description>
+&lt;p&gt;If you are moving from HTTP 1.1 to HTTP 2.0, the users using old browsers which are typically using HTTP 1.1 will be served via HTTP 1.1 only as HTTP 2.0 is built on top of HTTP 1.1&lt;/p&gt;
+&lt;p&gt;With more and more adoption of HTTP 2.0, all of the modern servers are becoming compliant to HTTP 2.0 If you are looking for improving the performance of your website, you should definitely move from HTTP 1.1 to HTTP 2.0&lt;/p&gt;
+- https://blog.ektagarg.com/posts/performance-improvement-with-http2/ - </description>
         </item>
     
     
@@ -373,6 +428,35 @@ func main() {
 &lt;p&gt;Likewise, all are APIs are working as expected. If you find any kind of difficulty following the above steps,please check this &lt;a href=&#34;https://github.com/ektagarg/gin-gorm-todo-app&#34;&gt;repo&lt;/a&gt; and run:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;git clone https://github.com/ektagarg/gin-gorm-todo-app
 &lt;/code&gt;&lt;/pre&gt;- https://blog.ektagarg.com/posts/todo-app-using-gin/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Hey, I&#39;m Ekta.</title>
+        <link>https://blog.ektagarg.com/about/</link>
+        <pubDate>Sat, 12 Dec 2020 02:01:58 +0530</pubDate>
+        
+        <guid>https://blog.ektagarg.com/about/</guid>
+        <description>Blog by Ekta https://blog.ektagarg.com/about/ -&lt;p&gt;I am a Software Development Engineer currently working at Grofers, India.
+I love solving problems, curious about &amp;ldquo;how&amp;rdquo; [in science, space and technology], writing about my technical findings, giving tech talks.&lt;/p&gt;
+&lt;p&gt;I have started this blog on 31st Dec, 2020 with the aim to keep posting about interesting problems I solve, tech topics I read about, TIL etc. I will try my best to keep my contributions.&lt;/p&gt;
+&lt;p&gt;There are some key areas, I will be focusing about in my upcoming blogs:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Programming (Go, Python)&lt;/li&gt;
+&lt;li&gt;Networking&lt;/li&gt;
+&lt;li&gt;Optimisation&lt;/li&gt;
+&lt;li&gt;Low level design&lt;/li&gt;
+&lt;li&gt;High level design&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You can contact me on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Email: &lt;a href=&#34;mailto:gargekta65@gmail.com&#34;&gt;Ekta Garg&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ektagarg&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://twitter.com/_ektagarg&#34;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.linkedin.com/in/ekta-garg-bb9a48a3/&#34;&gt;Linkedin&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+- https://blog.ektagarg.com/about/ - </description>
         </item>
     
     

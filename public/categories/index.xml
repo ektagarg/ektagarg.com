@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Blog by Ekta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Feb 2021 02:01:58 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 03 Apr 2021 02:01:58 +0530</lastBuildDate>
     
 	<atom:link href="https://blog.ektagarg.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,18 +14,18 @@
     <item>
       <title>Networking</title>
       <link>https://blog.ektagarg.com/categories/networking/</link>
-      <pubDate>Tue, 16 Feb 2021 02:01:58 +0530</pubDate>
+      <pubDate>Sat, 03 Apr 2021 02:01:58 +0530</pubDate>
       
       <guid>https://blog.ektagarg.com/categories/networking/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Go</title>
-      <link>https://blog.ektagarg.com/categories/go/</link>
-      <pubDate>Sun, 03 Jan 2021 11:58:58 +0530</pubDate>
+      <title>Web</title>
+      <link>https://blog.ektagarg.com/categories/web/</link>
+      <pubDate>Tue, 16 Feb 2021 02:01:58 +0530</pubDate>
       
-      <guid>https://blog.ektagarg.com/categories/go/</guid>
+      <guid>https://blog.ektagarg.com/categories/web/</guid>
       <description></description>
     </item>
     
@@ -44,6 +44,15 @@
       <pubDate>Thu, 31 Dec 2020 09:01:58 +0530</pubDate>
       
       <guid>https://blog.ektagarg.com/categories/talks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>https://blog.ektagarg.com/categories/go/</link>
+      <pubDate>Wed, 30 Dec 2020 02:01:58 +0530</pubDate>
+      
+      <guid>https://blog.ektagarg.com/categories/go/</guid>
       <description></description>
     </item>
     

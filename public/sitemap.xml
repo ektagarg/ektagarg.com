@@ -3,73 +3,58 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://blog.ektagarg.com/</loc>
-    <lastmod>2021-02-16T02:01:58+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.ektagarg.com/categories/</loc>
-    <lastmod>2021-02-16T02:01:58+05:30</lastmod>
+    <lastmod>2021-04-03T02:01:58+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://blog.ektagarg.com/tags/cdn/</loc>
-    <lastmod>2021-02-16T02:01:58+05:30</lastmod>
+    <lastmod>2021-04-03T02:01:58+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://blog.ektagarg.com/posts/cdn/</loc>
-    <lastmod>2021-02-16T02:01:58+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.ektagarg.com/posts/http2/</loc>
-    <lastmod>2021-02-16T02:01:58+05:30</lastmod>
+    <lastmod>2021-04-03T02:01:58+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://blog.ektagarg.com/tags/networking/</loc>
-    <lastmod>2021-02-16T02:01:58+05:30</lastmod>
+    <lastmod>2021-04-03T02:01:58+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://blog.ektagarg.com/categories/networking/</loc>
-    <lastmod>2021-02-16T02:01:58+05:30</lastmod>
+    <lastmod>2021-04-03T02:01:58+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://blog.ektagarg.com/posts/</loc>
-    <lastmod>2021-02-16T02:01:58+05:30</lastmod>
+    <lastmod>2021-04-03T02:01:58+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://blog.ektagarg.com/tags/</loc>
+    <lastmod>2021-04-03T02:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.ektagarg.com/tags/til/</loc>
+    <lastmod>2021-04-03T02:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.ektagarg.com/posts/performance-improvement-with-http2/</loc>
     <lastmod>2021-02-16T02:01:58+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.ektagarg.com/tags/go/</loc>
-    <lastmod>2021-01-03T11:58:58+05:30</lastmod>
+    <loc>https://blog.ektagarg.com/tags/web/</loc>
+    <lastmod>2021-02-16T02:01:58+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.ektagarg.com/categories/go/</loc>
-    <lastmod>2021-01-03T11:58:58+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.ektagarg.com/tags/optimization/</loc>
-    <lastmod>2021-01-03T11:58:58+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.ektagarg.com/tags/profiling/</loc>
-    <lastmod>2021-01-03T11:58:58+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.ektagarg.com/posts/profiling-and-optimizing-go/</loc>
-    <lastmod>2021-01-03T11:58:58+05:30</lastmod>
+    <loc>https://blog.ektagarg.com/categories/web/</loc>
+    <lastmod>2021-02-16T02:01:58+05:30</lastmod>
   </url>
   
   <url>
@@ -95,6 +80,11 @@
   <url>
     <loc>https://blog.ektagarg.com/tags/zapier/</loc>
     <lastmod>2021-01-01T09:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.ektagarg.com/tags/go/</loc>
+    <lastmod>2020-12-31T09:01:58+05:30</lastmod>
   </url>
   
   <url>
@@ -128,6 +118,11 @@
   </url>
   
   <url>
+    <loc>https://blog.ektagarg.com/categories/go/</loc>
+    <lastmod>2020-12-30T02:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.ektagarg.com/posts/todo-app-using-gin/</loc>
     <lastmod>2020-12-30T02:01:58+05:30</lastmod>
   </url>
@@ -135,6 +130,16 @@
   <url>
     <loc>https://blog.ektagarg.com/tags/rest/</loc>
     <lastmod>2020-12-30T02:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.ektagarg.com/</loc>
+    <lastmod>2020-12-12T02:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.ektagarg.com/about/</loc>
+    <lastmod>2020-12-12T02:01:58+05:30</lastmod>
   </url>
   
 </urlset>

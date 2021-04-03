@@ -6,7 +6,7 @@
     <description>Recent content in Networking on Blog by Ekta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Feb 2021 02:01:58 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 03 Apr 2021 02:01:58 +0530</lastBuildDate>
     
 	<atom:link href="https://blog.ektagarg.com/tags/networking/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,20 +14,13 @@
     <item>
       <title>CDN: Content Delivery Network</title>
       <link>https://blog.ektagarg.com/posts/cdn/</link>
-      <pubDate>Tue, 16 Feb 2021 02:01:58 +0530</pubDate>
+      <pubDate>Sat, 03 Apr 2021 02:01:58 +0530</pubDate>
       
       <guid>https://blog.ektagarg.com/posts/cdn/</guid>
-      <description>What is the challenge that CDN addresses? For eg: we have a software which has users from all around the world, but we don&amp;rsquo;t have servers all around the world and the experience that those users have due to that dynamic.
-What is a CDN? It is a service that accelerates internet content delivery to make your website faster.</description>
-    </item>
-    
-    <item>
-      <title>HTTP2</title>
-      <link>https://blog.ektagarg.com/posts/http2/</link>
-      <pubDate>Tue, 16 Feb 2021 02:01:58 +0530</pubDate>
-      
-      <guid>https://blog.ektagarg.com/posts/http2/</guid>
-      <description>How HTTP2.0 works?</description>
+      <description>What is a CDN? It is a service that accelerates internet content delivery to make your website faster.
+What is the challenge that CDN addresses? For eg: we have software that has users from all around the world, but we don&amp;rsquo;t have servers all around the world and the experience that those users have due to that dynamic.
+Let&amp;rsquo;s understand the problem with an example:
+I have a simple diagram showing I have a server hosted in Singapore and I have users all around the world.</description>
     </item>
     
   </channel>

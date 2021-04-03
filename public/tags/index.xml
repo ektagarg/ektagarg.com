@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Blog by Ekta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Feb 2021 02:01:58 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 03 Apr 2021 02:01:58 +0530</lastBuildDate>
     
 	<atom:link href="https://blog.ektagarg.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>CDN</title>
       <link>https://blog.ektagarg.com/tags/cdn/</link>
-      <pubDate>Tue, 16 Feb 2021 02:01:58 +0530</pubDate>
+      <pubDate>Sat, 03 Apr 2021 02:01:58 +0530</pubDate>
       
       <guid>https://blog.ektagarg.com/tags/cdn/</guid>
       <description></description>
@@ -23,36 +23,27 @@
     <item>
       <title>Networking</title>
       <link>https://blog.ektagarg.com/tags/networking/</link>
-      <pubDate>Tue, 16 Feb 2021 02:01:58 +0530</pubDate>
+      <pubDate>Sat, 03 Apr 2021 02:01:58 +0530</pubDate>
       
       <guid>https://blog.ektagarg.com/tags/networking/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Go</title>
-      <link>https://blog.ektagarg.com/tags/go/</link>
-      <pubDate>Sun, 03 Jan 2021 11:58:58 +0530</pubDate>
+      <title>TIL</title>
+      <link>https://blog.ektagarg.com/tags/til/</link>
+      <pubDate>Sat, 03 Apr 2021 02:01:58 +0530</pubDate>
       
-      <guid>https://blog.ektagarg.com/tags/go/</guid>
+      <guid>https://blog.ektagarg.com/tags/til/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Optimization</title>
-      <link>https://blog.ektagarg.com/tags/optimization/</link>
-      <pubDate>Sun, 03 Jan 2021 11:58:58 +0530</pubDate>
+      <title>Web</title>
+      <link>https://blog.ektagarg.com/tags/web/</link>
+      <pubDate>Tue, 16 Feb 2021 02:01:58 +0530</pubDate>
       
-      <guid>https://blog.ektagarg.com/tags/optimization/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Profiling</title>
-      <link>https://blog.ektagarg.com/tags/profiling/</link>
-      <pubDate>Sun, 03 Jan 2021 11:58:58 +0530</pubDate>
-      
-      <guid>https://blog.ektagarg.com/tags/profiling/</guid>
+      <guid>https://blog.ektagarg.com/tags/web/</guid>
       <description></description>
     </item>
     
@@ -80,6 +71,15 @@
       <pubDate>Fri, 01 Jan 2021 09:01:58 +0530</pubDate>
       
       <guid>https://blog.ektagarg.com/tags/zapier/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>https://blog.ektagarg.com/tags/go/</link>
+      <pubDate>Thu, 31 Dec 2020 09:01:58 +0530</pubDate>
+      
+      <guid>https://blog.ektagarg.com/tags/go/</guid>
       <description></description>
     </item>
     
