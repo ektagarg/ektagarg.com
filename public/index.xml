@@ -441,13 +441,14 @@ func main() {
         <description>Blog by Ekta https://blog.ektagarg.com/about/ -&lt;p&gt;I am a Software Development Engineer currently working at Grofers, India.
 I love solving problems, curious about &amp;ldquo;how&amp;rdquo; [in science, space and technology], writing about my technical findings, giving tech talks.&lt;/p&gt;
 &lt;p&gt;I have started this blog on 31st Dec, 2020 with the aim to keep posting about interesting problems I solve, tech topics I read about, TIL etc. I will try my best to keep my contributions.&lt;/p&gt;
-&lt;p&gt;There are some key areas, I will be focusing about in my upcoming blogs:&lt;/p&gt;
+&lt;p&gt;I will be mostly writing about these key areas in my upcoming blogs:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Programming (Go, Python)&lt;/li&gt;
 &lt;li&gt;Networking&lt;/li&gt;
 &lt;li&gt;Optimisation&lt;/li&gt;
 &lt;li&gt;Low level design&lt;/li&gt;
 &lt;li&gt;High level design&lt;/li&gt;
+&lt;li&gt;Short weekend projects&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;You can contact me on:&lt;/p&gt;
 &lt;ul&gt;

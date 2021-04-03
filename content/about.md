@@ -10,12 +10,13 @@ I love solving problems, curious about "how" [in science, space and technology],
 
 I have started this blog on 31st Dec, 2020 with the aim to keep posting about interesting problems I solve, tech topics I read about, TIL etc. I will try my best to keep my contributions.
 
-There are some key areas, I will be focusing about in my upcoming blogs:
+I will be mostly writing about these key areas in my upcoming blogs:
 1. Programming (Go, Python)
 2. Networking
 3. Optimisation
 4. Low level design
-5. High level design 
+5. High level design
+6. Short weekend projects 
 
 You can contact me on:
 
