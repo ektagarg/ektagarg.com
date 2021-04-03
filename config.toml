@@ -51,6 +51,6 @@ url = "/posts"
 name = "Archive"
 weight = 2
 [[menu.main]]
-url = "/about"
+url = "/me"
 name = "About"
 weight = 1
