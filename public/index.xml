@@ -434,11 +434,11 @@ func main() {
     
         <item>
         <title>Hey, I&#39;m Ekta.</title>
-        <link>https://blog.ektagarg.com/about/</link>
+        <link>https://blog.ektagarg.com/me/</link>
         <pubDate>Sat, 12 Dec 2020 02:01:58 +0530</pubDate>
         
-        <guid>https://blog.ektagarg.com/about/</guid>
-        <description>Blog by Ekta https://blog.ektagarg.com/about/ -&lt;p&gt;I am a Software Development Engineer currently working at Grofers, India.
+        <guid>https://blog.ektagarg.com/me/</guid>
+        <description>Blog by Ekta https://blog.ektagarg.com/me/ -&lt;p&gt;I am a Software Development Engineer currently working at Grofers, India.
 I love solving problems, curious about &amp;ldquo;how&amp;rdquo; [in science, space and technology], writing about my technical findings, giving tech talks.&lt;/p&gt;
 &lt;p&gt;I have started this blog on 31st Dec, 2020 with the aim to keep posting about interesting problems I solve, tech topics I read about, TIL etc. I will try my best to keep my contributions.&lt;/p&gt;
 &lt;p&gt;I will be mostly writing about these key areas in my upcoming blogs:&lt;/p&gt;
@@ -457,7 +457,7 @@ I love solving problems, curious about &amp;ldquo;how&amp;rdquo; [in science, sp
 &lt;li&gt;&lt;a href=&#34;https://twitter.com/_ektagarg&#34;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.linkedin.com/in/ekta-garg-bb9a48a3/&#34;&gt;Linkedin&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-- https://blog.ektagarg.com/about/ - </description>
+- https://blog.ektagarg.com/me/ - </description>
         </item>
     
     
