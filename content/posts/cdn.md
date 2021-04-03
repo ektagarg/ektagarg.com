@@ -1,6 +1,6 @@
 ---
 title: "CDN: Content Delivery Network"
-date: 2021-02-16T02:01:58+05:30
+date: 2021-04-03T02:01:58+05:30
 description: ""
 tags: [Networking, CDN, TIL]
 featured_image: "/images/cdn/cdn_header.jpg"
